@@ -1,8 +1,68 @@
 .nav-on-scroll {
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     padding: @step-xl @step-xxl;
     color: @c-white;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    box-sizing: border-box;
+    z-index: 10;
+}
 
+.nav {
+    font-size: 0;
+    //.nav__links
+    &__links {
+        width: calc(~'(100% - 157px) / 2');
+        display: inline-block;
+        vertical-align: top;
+
+        //.nav__links__item 
+        &__item {
+            display: inline-block;
+            opacity: .5;
+            font-size: 1.3rem;
+            line-height: 37px;
+
+            & + & {
+                margin-left: @step-l;
+            }
+        }
+    }
+
+    //.nav__brand
+    &__brand {
+        width: 157px;
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+
+        //.nav__brand__logo_on-white
+        &__logo_on-white {
+            display: none;
+        }
+    }
+
+    //.nav__contact
+    &__contact {
+        width: calc(~'(100% - 157px) / 2');
+        display: inline-block;
+        font-size: 1.3rem;
+        text-align: right;
+        opacity: .5;
+        line-height: 37px;
+        vertical-align: top;
+
+        //nav__contact__icon
+        &__icon {
+            display: inline-block;
+        }
+
+        //nav__contact__text
+        &__text {
+            display: inline-block;
+        }
+    }
 }

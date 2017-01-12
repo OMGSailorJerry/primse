@@ -4,24 +4,78 @@
     <meta charset="UTF-8">
     <title>PRIMSE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/jquery.pagepiling.css" />
+	<link rel="stylesheet" type="text/css" href="./css/examples.css" />    
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <div class="nav nav-on-scroll">
         <ul class="nav__links">
-            <li class="nav__links__item">work</li>
-            <li class="nav__links__item">about us</li>
-            <li class="nav__links__item">contacts</li>
+            <li class="nav__links__item"><a class="line-through" href="#"><span>work</span></a></li>
+            <li class="nav__links__item"><a class="line-through" href="#"><span>about us</span></a></li>
+            <li class="nav__links__item"><a class="line-through" href="#"><span>contacts</span></a></li>
         </ul>
 
         <div class="nav__brand">
             <img src="./img/logo_w.png" alt="" class="nav__brand__logo">
+            <img src="./img/logo_b.png" alt="" class="nav__brand__logo_on-white">
         </div>
 
         <div class="nav__contact">
             <img src="./img/mail_w.png" alt="" class="nav__contact__icon">
-            <div class="nav__contact__text">primse@gmail.com</div>
+            <div class="nav__contact__text"><a href="mailto:primse@gmail.com?Subject=Hello%20primse">primse@gmail.com</a></div>
         </div>
     </div>
+
+    <wrapper class="wrapper">
+        <div id="pagepiling">
+            <div class="section" id="section1">
+                <div class="main">
+                    <div class="main__title">We create good sites for your business!</div>
+                    <div class="main__caption">Making comfortable adaptive websites</div>
+                    <div class="main__link"><a href="#page2">View works</a></div>
+                </div>
+            </div>
+            <div class="section" id="section2">
+
+            </div>
+            <div class="section" id="section3">
+
+            </div>
+            <div class="section" id="section4">
+
+            </div>
+            <div class="section" id="section5">
+
+            </div>
+            <div class="section" id="section6">
+
+            </div>
+        </div>
+    </wrapper>
+
+    <footer class="footer">
+        <div class="footer__copyright">© 2010 – 2016 «Primse»</div>
+        <div class="page-nav">
+            <ul class="page-nav__list">
+                <li data-menuanchor="page1" class="page-nav__list__item"><a href="#page1"><div></div></a></li>
+                <li data-menuanchor="page2" class="page-nav__list__item"><a href="#page2"><div></div></a></li>
+                <li data-menuanchor="page3" class="page-nav__list__item"><a href="#page3"><div></div></a></li>
+                <li data-menuanchor="page4" class="page-nav__list__item"><a href="#page4"><div></div></a></li>
+                <li data-menuanchor="page5" class="page-nav__list__item"><a href="#page5"><div></div></a></li>
+                <li data-menuanchor="page6" class="page-nav__list__item"><a href="#page6"><div></div></a></li>
+            </ul>
+        </div>
+        <div class="footer__social">
+            <ul class="social-list">
+                <li class="social-list__item"><a href="#"><img src="./img/Behance_w.png" alt=""></a></li>
+                <li class="social-list__item"><a href="#"><img src="./img/drible_w.png" alt=""></a></li>
+            </ul>
+        </div>
+    </footer>
+    
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.pagepiling.min.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
 </body>
 </html>

@@ -7,50 +7,122 @@
     <link rel="stylesheet" type="text/css" href="./css/jquery.pagepiling.css" />
 	<link rel="stylesheet" type="text/css" href="./css/examples.css" />    
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/stars.css">    
 </head>
 <body>
     <div class="nav nav-on-scroll">
         <ul class="nav__links">
-            <li class="nav__links__item"><a class="line-through" href="#"><span>work</span></a></li>
+            <li class="nav__links__item"><a class="line-through" href="./index.html" active><span>work</span></a></li>
             <li class="nav__links__item"><a class="line-through" href="#"><span>about us</span></a></li>
             <li class="nav__links__item"><a class="line-through" href="#"><span>contacts</span></a></li>
         </ul>
 
         <div class="nav__brand">
-            <img src="./img/logo_w.png" alt="" class="nav__brand__logo">
-            <img src="./img/logo_b.png" alt="" class="nav__brand__logo_on-white">
+            <a href="./index.html">
+                <img src="./img/logo_w.png" alt="" class="nav__brand__logo">
+                <img src="./img/logo_b.png" alt="" class="nav__brand__logo_on-white">
+            </a>
         </div>
 
         <div class="nav__contact">
-            <img src="./img/mail_w.png" alt="" class="nav__contact__icon">
+            <img src="./img/mail_w.png" alt="" class="nav__contact__icon nav__contact__icon_on-dark">
+            <img src="./img/mail_b.png" alt="" class="nav__contact__icon nav__contact__icon_on-light">
             <div class="nav__contact__text"><a href="mailto:primse@gmail.com?Subject=Hello%20primse">primse@gmail.com</a></div>
         </div>
     </div>
 
     <wrapper class="wrapper">
         <div id="pagepiling">
-            <div class="section" id="section1">
+            <div class="section" id="section0">
+                <div class="stars">
+                    <div id='stars'></div>
+                    <div id='stars2'></div>
+                    <div id='stars3'></div>
+                </div>
+
                 <div class="main">
                     <div class="main__title">We create good sites for your business!</div>
                     <div class="main__caption">Making comfortable adaptive websites</div>
-                    <div class="main__link"><a href="#page2">View works</a></div>
+                    <div class="main__link"><a href="#page1">View works</a></div>
+                </div>
+            </div>
+            <div class="section" id="section1">
+                <div class="main main_on-light">
+                    <div class="left-side">
+                        <div class="main__caption">WEB DESIGN</div>
+                        <div class="main__title">Toplombard</div>
+                        <div class="main__caption">Site best pawnshop Russia, the main goal was to attract new customers that have successfully managed to make fuller</div>
+                        <div class="main__link"><a href="#">View work</a></div>
+                    </div>
+                    <div class="right-side">
+                        <img src="./img/toplombard_main.png" alt="" class="right-side__img">
+                    </div>
                 </div>
             </div>
             <div class="section" id="section2">
-
+                <div class="main">
+                    <div class="left-side">
+                        <div class="main__caption">WEB DESIGN</div>
+                        <div class="main__title">Itima</div>
+                        <div class="main__caption">Website development company specializing in custom software that tells customers about the company's work principles</div>
+                        <div class="main__link"><a href="#">View work</a></div>
+                    </div>
+                    <div class="right-side">
+                        <img src="./img/itima_main.png" alt="" class="right-side__img">
+                    </div>
+                </div>
             </div>
             <div class="section" id="section3">
-
+                <div class="main">
+                    <div class="left-side">
+                        <div class="main__caption">WEB DESIGN</div>
+                        <div class="main__title">Novtex</div>
+                        <div class="main__caption">The site for the sale of high quality fiberglass reinforcements, which are several times higher than its competitors</div>
+                        <div class="main__link"><a href="#">View work</a></div>
+                    </div>
+                    <div class="right-side">
+                        <img src="./img/novtex_main.png" alt="" class="right-side__img">
+                    </div>
+                </div>
             </div>
             <div class="section" id="section4">
-
+                <div class="main">
+                    <div class="left-side">
+                        <div class="main__caption">WEB DESIGN</div>
+                        <div class="main__title">SNK</div>
+                        <div class="main__caption">This is a company that since 2001 has a positive experience for the supply of MRI for the needs of leading companies in the oil industry</div>
+                        <div class="main__link"><a href="#">View work</a></div>
+                    </div>
+                    <div class="right-side">
+                        <img src="./img/snk_main.png" alt="" class="right-side__img">
+                    </div>
+                </div>
             </div>
             <div class="section" id="section5">
-
+                <div class="main">
+                    <div class="left-side">
+                        <div class="main__caption">WEB DESIGN</div>
+                        <div class="main__title">Ideal Solution</div>
+                        <div class="main__caption">The ideology of the company is focused on customer problems, liability otnsitsya to every detail of the event and takes into account all the wishes at any stage of the project</div>
+                        <div class="main__link"><a href="#">View work</a></div>
+                    </div>
+                    <div class="right-side">
+                        <img src="./img/ideal-solution_main.png" alt="" class="right-side__img">
+                    </div>
+                </div>
             </div>
-            <div class="section" id="section6">
-
+        </div>
+        <div class="counter">
+            <div class="counter__i">
+                <div class="counter__i__list">
+                    <li class="counter__i__item">1</li>
+                    <li class="counter__i__item">2</li>
+                    <li class="counter__i__item">3</li>
+                    <li class="counter__i__item">4</li>
+                    <li class="counter__i__item">5</li>
+                </div>
             </div>
+            <div class="counter__length">/ 5</div>
         </div>
     </wrapper>
 
@@ -58,18 +130,20 @@
         <div class="footer__copyright">© 2010 – 2016 «Primse»</div>
         <div class="page-nav">
             <ul class="page-nav__list">
+                <li data-menuanchor="page0" class="page-nav__list__item"><a href="#page0"><div></div></a></li>
                 <li data-menuanchor="page1" class="page-nav__list__item"><a href="#page1"><div></div></a></li>
                 <li data-menuanchor="page2" class="page-nav__list__item"><a href="#page2"><div></div></a></li>
                 <li data-menuanchor="page3" class="page-nav__list__item"><a href="#page3"><div></div></a></li>
                 <li data-menuanchor="page4" class="page-nav__list__item"><a href="#page4"><div></div></a></li>
                 <li data-menuanchor="page5" class="page-nav__list__item"><a href="#page5"><div></div></a></li>
-                <li data-menuanchor="page6" class="page-nav__list__item"><a href="#page6"><div></div></a></li>
             </ul>
         </div>
         <div class="footer__social">
             <ul class="social-list">
-                <li class="social-list__item"><a href="#"><img src="./img/Behance_w.png" alt=""></a></li>
-                <li class="social-list__item"><a href="#"><img src="./img/drible_w.png" alt=""></a></li>
+                <li class="social-list__item social-list__item_on-dark"><a href="#"><img src="./img/Behance_w.png" alt=""></a></li>
+                <li class="social-list__item social-list__item_on-light"><a href="#"><img src="./img/Behance_b.png" alt=""></a></li>
+                <li class="social-list__item social-list__item_on-dark"><a href="#"><img src="./img/drible_w.png" alt=""></a></li>
+                <li class="social-list__item social-list__item_on-light"><a href="#"><img src="./img/drible_b.png" alt=""></a></li>
             </ul>
         </div>
     </footer>

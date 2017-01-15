@@ -72,8 +72,15 @@
           position: absolute;
           overflow: hidden;
           width: 100vw;
+          max-width: 1920px;
           height: 100vh;
           top: 0;
           pointer-events: none;
           opacity: 0.5;
         }
+
+          @media (min-width: 1920px) {
+            .stars {
+              left: calc(50% - 1920px / 2);
+            }
+          }

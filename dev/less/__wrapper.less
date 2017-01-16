@@ -1,0 +1,98 @@
+.wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+
+    // padding: 137px @step-xxl 120px @step-xxl;
+}
+
+.main {
+    margin: auto;
+    text-align: center;
+    width: 95%;
+    max-width: 1500px;
+    color: @c-white;
+    font-size: 0;
+
+    //.main_on-light
+    &_on-light {
+        color: @c-black;
+    }
+    //.main__title
+    &__title {
+        font-size: 4rem;
+        font-family: @font-bd;
+        max-width: 600px;
+        margin: 0 auto;
+        
+        & + .main__caption {
+            margin-top: @step-m;
+        }
+    }
+
+    //.main__caption
+    &__caption {
+        font-size: 1.3rem;
+        opacity: .5;
+        font-family: @font-lt;
+        line-height: 25px;
+    }
+
+    //.main__link
+    &__link {
+        margin-top: @step-m;
+        text-decoration: underline;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        font-size: 1rem;
+    }
+
+    .left-side{
+        display: inline-block;
+        vertical-align: top;
+        width: 45%;
+        height: 450px;
+        padding-bottom: 100px;
+        box-sizing: border-box;
+        padding: @step-m;
+        box-sizing: border-box;
+        
+        .main__title, .main__caption, .main__link {
+            text-align: left;
+            width: 100%;
+            max-width: 100%;
+        }
+        .main__title {
+            margin-top: @step-s;
+        }
+        .main__caption {
+            font-size: 1rem;
+            max-width: 360px;
+        }
+    }
+    .right-side {
+        display: inline-block;
+        vertical-align: top;
+        width: 55%;
+        height: 450px;
+        position: relative;
+        padding: @step-m;
+        box-sizing: border-box;
+        // overflow-y: hidden;
+
+        //.right-side__img
+        &__img {
+            position: absolute;
+            left: @step-m;
+            right: @step-m;
+            bottom: -@step-xl;
+            width: calc(~'100% - @{step-m} * 2');
+            opacity: 0;
+            transition: opacity .2s;
+            // height: 100%;
+            // width: 100%;
+            height: auto;
+        }
+    }
+}

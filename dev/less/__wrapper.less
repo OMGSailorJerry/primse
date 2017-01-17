@@ -29,6 +29,11 @@
         & + .main__caption {
             margin-top: @step-m;
         }
+        //.main__title_large
+        &_large {
+            font-size: 5rem;
+            max-width: 750px;
+        }
     }
 
     //.main__caption
@@ -42,7 +47,6 @@
     //.main__link
     &__link {
         margin-top: @step-m;
-        text-decoration: underline;
         text-transform: uppercase;
         letter-spacing: .5px;
         font-size: 1rem;
@@ -57,7 +61,9 @@
         box-sizing: border-box;
         padding: @step-m;
         box-sizing: border-box;
-        
+        opacity: 0;
+        transition: opacity .2s;
+
         .main__title, .main__caption, .main__link {
             text-align: left;
             width: 100%;
@@ -79,8 +85,10 @@
         position: relative;
         padding: @step-m;
         box-sizing: border-box;
-        // overflow-y: hidden;
-
+        opacity: 0;
+        transition: opacity .2s;
+        
+        
         //.right-side__img
         &__img {
             position: absolute;
@@ -88,8 +96,8 @@
             right: @step-m;
             bottom: -@step-xl;
             width: calc(~'100% - @{step-m} * 2');
-            opacity: 0;
-            transition: opacity .2s;
+            // opacity: 0;
+            // transition: opacity .2s;
             // height: 100%;
             // width: 100%;
             height: auto;

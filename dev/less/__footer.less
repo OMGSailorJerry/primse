@@ -7,7 +7,6 @@
     color: @c-white;
     box-sizing: border-box;
     font-size: 0;
-    opacity: .5;
     z-index: 10;
 
     //.footer__copyright
@@ -20,7 +19,7 @@
         line-height: @step-s;
         letter-spacing: 0.5px;
         vertical-align: top;
-
+        opacity: .5;
     }
 
     //.footer__social
@@ -30,6 +29,7 @@
         height: @step-s;
         line-height: @step-s;
         vertical-align: top;
+        
     }
 
     .page-nav {
@@ -73,7 +73,13 @@
     text-align: right;
     //.social-list__item
     &__item {
+        opacity: .5;
         display: inline-block;
+
+        &:hover {
+            opacity: 1;
+        }
+
         & + & {
             margin-left: @step-s;
         }

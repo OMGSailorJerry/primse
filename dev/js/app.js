@@ -6,7 +6,7 @@ $(document).ready(function() {
         direction: 'horizontal',
         menu: '#menu',
         anchors: ['page0', 'page1', 'page2', 'page3', 'page4', 'page5'],
-        sectionsColor: ['#000', '#bd9663', '#9c2856', '#1e272b', '#479c38', '#633978'],
+        sectionsColor: ['#000', '#fff', '#9c2856', '#1e272b', '#479c38', '#633978'],
         navigation: true,
         afterRender: function(){
             $('#pp-nav').addClass('custom');

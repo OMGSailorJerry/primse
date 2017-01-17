@@ -231,6 +231,7 @@ a.underline:after {
 .main__title_large {
   font-size: 5rem;
   max-width: 750px;
+  z-index: 7;
 }
 .main__caption {
   font-size: 1.3rem;
@@ -311,7 +312,7 @@ a.underline:after {
 .pp-viewing-page1 .counter__i__list {
   top: 0;
 }
-.pp-viewing-page1 .stars {
+.pp-viewing-page1 canvas {
   display: none;
 }
 .pp-viewing-page2 [data-anchor="page2"] .left-side,
@@ -325,7 +326,7 @@ a.underline:after {
 .pp-viewing-page2 .counter__i__list {
   top: -200px;
 }
-.pp-viewing-page2 .stars {
+.pp-viewing-page2 canvas {
   display: none;
 }
 .pp-viewing-page3 [data-anchor="page3"] .left-side,
@@ -339,7 +340,7 @@ a.underline:after {
 .pp-viewing-page3 .counter__i__list {
   top: -400px;
 }
-.pp-viewing-page3 .stars {
+.pp-viewing-page3 canvas {
   display: none;
 }
 .pp-viewing-page4 [data-anchor="page4"] .left-side,
@@ -353,7 +354,7 @@ a.underline:after {
 .pp-viewing-page4 .counter__i__list {
   top: -600px;
 }
-.pp-viewing-page4 .stars {
+.pp-viewing-page4 canvas {
   display: none;
 }
 .pp-viewing-page5 [data-anchor="page5"] .left-side,
@@ -367,8 +368,16 @@ a.underline:after {
 .pp-viewing-page5 .counter__i__list {
   top: -800px;
 }
-.pp-viewing-page5 .stars {
+.pp-viewing-page5 canvas {
   display: none;
+}
+canvas {
+  position: absolute;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 5;
 }
 .counter {
   display: none;

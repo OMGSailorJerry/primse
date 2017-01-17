@@ -21,6 +21,7 @@
     // [data-menuanchor="page0"] {
     //     opacity: 1;
     // }
+
 }
 
 .pp-viewing-page1 {
@@ -72,7 +73,7 @@
     .social-list__item_on-light {
         // display: inline-block;
     }
-    .stars {
+    canvas {
         display: none;
     }
 }
@@ -92,7 +93,7 @@
     .counter__i__list {
         top: -200px;
     }
-    .stars {
+    canvas {
         display: none;
     }
 }
@@ -112,7 +113,7 @@
     .counter__i__list {
         top: -400px;
     }
-    .stars {
+    canvas {
         display: none;
     }
 }
@@ -132,7 +133,7 @@
     .counter__i__list {
         top: -600px;
     }
-    .stars {
+    canvas {
         display: none;
     }
 }
@@ -152,7 +153,19 @@
     .counter__i__list {
         top: -800px;
     }
-    .stars {
+    canvas {
         display: none;
     }
+}
+
+canvas {
+    position: absolute;
+    overflow: hidden;
+    width: 100vw;
+    // max-width: 1920px;
+    height: 100vh;
+    top: 0;
+    z-index: 5;
+    // pointer-events: none;
+    // opacity: 0.5;
 }

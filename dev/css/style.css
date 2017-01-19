@@ -31,14 +31,14 @@ a.line-through:after {
   right: auto;
   height: 2px;
   background-color: #fff;
-  transition: width .2s;
+  transition: width .25s;
 }
 a.line-through:hover:after,
 a.line-through:active:after,
 a.line-through:focus:after,
 a.line-through[active]:after {
   width: 100%;
-  transition: width .2s;
+  transition: width .25s;
   color: inherit;
 }
 a.underline {
@@ -167,6 +167,9 @@ a.underline:after {
   margin-right: 5px;
   opacity: .5;
 }
+.footer .page-nav__list__item:hover {
+  opacity: .7;
+}
 .footer .page-nav__list__item.active {
   opacity: 1;
 }
@@ -226,7 +229,7 @@ a.underline:after {
   margin: 0 auto;
 }
 .main__title + .main__caption {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 .main__title_large {
   font-size: 5rem;
@@ -284,12 +287,96 @@ a.underline:after {
   position: absolute;
   left: 30px;
   right: 30px;
-  bottom: -50px;
+  bottom: 0;
   width: calc(100% - 30px * 2);
   height: auto;
 }
+.main__form {
+  width: 80%;
+  max-width: 620px;
+}
+.main__form form {
+  margin-top: 50px;
+  text-align: left;
+}
+.main__form__input {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  font-size: 1.3rem;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.main__form__input:focus {
+  border-bottom-color: #000;
+}
+.main__form__input + .main__form__input {
+  margin-top: 20px;
+}
+.main__form__submit {
+  width: 170px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  background-color: #2470cf;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.main__form__submit:hover {
+  background-color: rgba(36, 112, 207, 0.9);
+}
+.keep-touch {
+  margin-top: 120px;
+}
+.keep-touch-item {
+  display: inline-block;
+  vertical-align: top;
+}
+.keep-touch-item:first-child {
+  float: left;
+}
+.keep-touch-item:last-child {
+  float: right;
+}
+.keep-touch-title {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.5);
+  height: 30px;
+  line-height: 30px;
+}
+.keep-touch-links {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.keep-touch-links-item {
+  display: inline-block;
+  vertical-align: bottom;
+  color: #000;
+  font-size: 1.3rem;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 10px;
+}
+.keep-touch-links-item img {
+  height: 23px;
+  width: auto;
+}
+.keep-touch-links-item a {
+  font-size: inherit;
+  height: 30px;
+  line-height: 30px;
+}
 /* Overwriting fullPage.js tooltip color
 * --------------------------------------- */
+.pp-tableCell {
+  padding: 0 90px;
+}
 #pp-nav.custom .pp-tooltip {
   position: fixed;
   z-index: 100;
@@ -613,9 +700,9 @@ a.underline:after {
   -moz-transform: scaleY(0);
   -ms-transform: scaleY(0);
   transform: scaleY(0);
-  -webkit-transition: all 700ms cubic-bezier(0, 0.07, 1, -0.21);
-  -moz-transition: all 700ms cubic-bezier(0, 0.07, 1, -0.21);
-  transition: all 700ms cubic-bezier(0, 0.07, 1, -0.21);
+  -webkit-transition: all 700ms linear;
+  -moz-transition: all 700ms linear;
+  transition: all 700ms linear;
 }
 .md-effect-1 .md-content > * {
   opacity: 0;
@@ -656,7 +743,32 @@ a.underline:after {
   padding-left: 120px;
   text-align: left;
   background-color: transparent;
-  transition: all 0.7s cubic-bezier(1, 0.07, 1, 0.63);
+  transition: all 350ms linear;
+}
+.projects__item:before {
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  line-height: 30px;
+  top: calc(50% - 30px / 2);
+  left: 50px;
+  content: '0' counter(step-counter);
+  color: #a1a1a1;
+  font-size: 1.7rem;
+  font-family: 'Montserrat Light';
+}
+.projects__item:after {
+  content: ' ';
+  position: absolute;
+  top: calc(50% - 24px / 2);
+  right: 7%;
+  transition: all 1s;
+  opacity: 0;
+  background-image: url('../img/arrow_w.png');
+  background-size: 100%;
+  height: 24px;
+  width: 35px;
+  background-repeat: no-repeat;
 }
 .projects__item:hover {
   color: #fff;
@@ -664,6 +776,9 @@ a.underline:after {
 .projects__item:hover:after {
   right: 5%;
   opacity: .5;
+}
+.projects__item:hover:before {
+  color: #fff;
 }
 .projects__item_tl:hover {
   background-color: #bd9663;
@@ -691,31 +806,6 @@ a.underline:after {
   width: 100%;
   min-height: 70px;
   vertical-align: middle;
-}
-.projects__item:before {
-  position: absolute;
-  width: 10px;
-  height: 30px;
-  line-height: 30px;
-  top: calc(50% - 30px / 2);
-  left: 50px;
-  content: '0' counter(step-counter);
-  color: #a1a1a1;
-  font-size: 1.7rem;
-  font-family: 'Montserrat Light';
-}
-.projects__item:after {
-  content: ' ';
-  position: absolute;
-  top: calc(50% - 24px / 2);
-  right: 10%;
-  transition: all 1s;
-  opacity: 0;
-  background-image: url('../img/arrow_w.png');
-  background-size: 100%;
-  height: 24px;
-  width: 35px;
-  background-repeat: no-repeat;
 }
 .projects__item__category {
   font-size: 1rem;

@@ -27,7 +27,12 @@
         margin: 0 auto;
         
         & + .main__caption {
-            margin-top: @step-m;
+            margin-top: 15px;
+        }
+        //.main__title_large
+        &_large {
+            font-size: 5rem;
+            max-width: 750px;
         }
     }
 
@@ -42,7 +47,6 @@
     //.main__link
     &__link {
         margin-top: @step-m;
-        text-decoration: underline;
         text-transform: uppercase;
         letter-spacing: .5px;
         font-size: 1rem;
@@ -57,7 +61,9 @@
         box-sizing: border-box;
         padding: @step-m;
         box-sizing: border-box;
-        
+        opacity: 0;
+        transition: opacity .2s;
+
         .main__title, .main__caption, .main__link {
             text-align: left;
             width: 100%;
@@ -79,20 +85,127 @@
         position: relative;
         padding: @step-m;
         box-sizing: border-box;
-        // overflow-y: hidden;
-
+        opacity: 0;
+        transition: opacity .2s;
+        
+        
         //.right-side__img
         &__img {
             position: absolute;
             left: @step-m;
             right: @step-m;
-            bottom: -@step-xl;
+            bottom: 0;
+            // bottom: -@step-xl;
             width: calc(~'100% - @{step-m} * 2');
-            opacity: 0;
-            transition: opacity .2s;
+            // opacity: 0;
+            // transition: opacity .2s;
             // height: 100%;
             // width: 100%;
             height: auto;
+        }
+    }
+
+    //.main__form
+    &__form {
+        width: 80%;
+        max-width: 620px; 
+        
+        form {
+            margin-top: @step-xl;
+            text-align: left;
+        }
+        
+        //.main__form__input
+        &__input {
+            display: block;
+            height: @step-l;
+            line-height: @step-l;
+            width: 100%;
+            font-size: 1.3rem;
+            border: none;
+            border-bottom: 1px solid fade(@c-black, 10%);
+
+            &:focus {
+                border-bottom-color: @c-black;
+            }
+            & + & {
+                margin-top: @step-s;
+            }
+        }
+
+        //.main__form__submit
+        &__submit {
+            width: 170px;
+            height: @step-xl;
+            line-height: @step-xl;
+            color: @c-white;
+            background-color: @c-blue;
+            font-size: 1rem;
+            text-transform: uppercase;
+            border: none;
+            margin-top: 25px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: fade(@c-blue, 90%);
+            }
+        }
+    }
+
+
+}
+
+.keep-touch {
+    margin-top: 120px;
+    //.keep-touch-item
+    &-item {
+        display: inline-block;
+        vertical-align: top;
+
+        &:first-child {
+            float: left;
+        }
+
+        &:last-child {
+            float: right;
+        }
+    }
+    //.keep-touch-title
+    &-title {
+        display: inline-block;
+        vertical-align: bottom;
+        font-size: 1.3rem;
+        color: fade(@c-black, 50%);
+        height: @step-m;
+        line-height: @step-m;
+    }
+
+    //.keep-touch-links
+    &-links {
+        display: inline-block;
+        vertical-align: bottom;
+        
+        
+
+        //.keep-touch-links-item 
+        &-item {
+            display: inline-block;
+            vertical-align: bottom;
+            color: @c-black;
+            font-size: 1.3rem;
+            height: @step-m;
+            line-height: @step-m;
+            margin-left: @step-xs;
+
+            img {
+                height: 23px;
+                width: auto;
+            }
+            a {
+                font-size: inherit;
+                height: @step-m;
+                line-height: @step-m;
+            }
         }
     }
 }

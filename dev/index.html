@@ -18,7 +18,7 @@
         <ul class="nav__links">
             <li class="nav__links__item md-trigger" data-modal="modal-works"><a class="line-through" href="#"><span>works</span></a></li>
             <li class="nav__links__item md-trigger" data-modal="modal-about_us"><a class="line-through" href="#"><span>about us</span></a></li>
-            <li class="nav__links__item"><a class="line-through" href="#"><span>contacts</span></a></li>
+            <li class="nav__links__item md-trigger" data-modal="modal-contacts"><a class="line-through" href="#"><span>contacts</span></a></li>
         </ul>
 
         <div class="nav__brand">
@@ -37,10 +37,19 @@
 
     <div class="md-modal md-effect-1" id="modal-about_us">  
         <div class="md-content aligned">
-            <div class="md-close"></div>
+            <div class="md-close">
+                <a href="#" class="close">
+		            <span></span>
+                    <span></span>
+	            </a>
+            </div>
+
 
             <div class="md-content__main">
                 <div class="md-content__main__left">
+                    
+
+                    
                     <div class="main__title">Clients</div>
                     <ul class="clients">
                         <li class="clients__item"><img src="./img/clients/c-novtech.png" alt=""></li>
@@ -66,7 +75,12 @@
     </div>
     <div class="md-modal md-effect-1" id="modal-works">  
         <div class="md-content">
-            <div class="md-close"></div>
+            <div class="md-close">
+                <a href="#" class="close">
+		            <span></span>
+                    <span></span>
+	            </a>
+            </div>
 
             <div class="md-content__header">
                 <div class="main__title main__title_small">Works</div>
@@ -117,6 +131,55 @@
             </div>
         </div>
     </div>
+    <div class="md-modal md-effect-1" id="modal-contacts">  
+        <div class="md-content aligned">
+            <div class="md-close">
+                <a href="#" class="close">
+		            <span></span>
+                    <span></span>
+	            </a>
+            </div>
+
+
+            <div class="md-content__main main__form">
+                <div class="main__title">Contacts</div>
+
+                <form action="" class="">
+                    <input type="text" class="main__form__input" placeholder="What’s is your name?">
+                    <input type="email" class="main__form__input" placeholder="Your E-mail">
+                    <input type="text" class="main__form__input" placeholder="What we can help with you?">
+                    <button type="submit" class="main__form__submit">send</button>
+                </form>
+
+                <div class="keep-touch">
+                    <div class="keep-touch-item">
+                        <div class="keep-touch-title">Social:</div>
+
+                        <ul class="keep-touch-links">
+                            <li class="keep-touch-links-item"><a href="#"><img src="./img/Behance_b.png" alt=""></a></li>
+                            <li class="keep-touch-links-item"><a href="#"><img src="./img/drible_b.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="keep-touch-item">
+                        <div class="keep-touch-title">E-mail:</div>
+                        
+                        <ul class="keep-touch-links">
+                            <li class="keep-touch-links-item"><a href="mailto:primse@gmail.com?Subject=Hello%20primse">primse@gmail.com</a></li>
+                        </ul>
+                    </div>  
+                                        
+                    <div class="keep-touch-item">
+                        <div class="keep-touch-title">Skype:</div>
+                        
+                        <ul class="keep-touch-links">
+                            <li class="keep-touch-links-item">Primse</li>
+                        </ul>
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <div class="md-overlay"></div><!-- the overlay element -->
@@ -131,9 +194,9 @@
                 </div>
 
                 <div class="main">
-                    <div class="main__title">We create good sites for your business!</div>
+                    <div class="main__title main__title_large">We create good sites for your business!</div>
                     <div class="main__caption">Making comfortable adaptive websites</div>
-                    <div class="main__link"><a href="#page1">View works</a></div>
+                    <div class="main__link"><a href="#page1" class="underline">View works</a></div>
                 </div>
             </div>
             <div class="section" id="section1">
@@ -142,10 +205,10 @@
                         <div class="main__caption">WEB DESIGN</div>
                         <div class="main__title">Toplombard</div>
                         <div class="main__caption">Site best pawnshop Russia, the main goal was to attract new customers that have successfully managed to make fuller</div>
-                        <div class="main__link"><a href="#">View work</a></div>
+                        <div class="main__link"><a href="#" class="underline">View work</a></div>
                     </div>
                     <div class="right-side">
-                        <img src="./img/toplombard_main.png" alt="" class="right-side__img">
+                        <img src="./img/toplombard_main-min.png" alt="" class="right-side__img">
                     </div>
                 </div>
             </div>
@@ -155,10 +218,10 @@
                         <div class="main__caption">WEB DESIGN</div>
                         <div class="main__title">Itima</div>
                         <div class="main__caption">Website development company specializing in custom software that tells customers about the company's work principles</div>
-                        <div class="main__link"><a href="#">View work</a></div>
+                        <div class="main__link"><a href="#" class="underline">View work</a></div>
                     </div>
                     <div class="right-side">
-                        <img src="./img/itima_main.png" alt="" class="right-side__img">
+                        <img src="./img/itima_main-min.png" alt="" class="right-side__img">
                     </div>
                 </div>
             </div>
@@ -168,10 +231,10 @@
                         <div class="main__caption">WEB DESIGN</div>
                         <div class="main__title">Novtex</div>
                         <div class="main__caption">The site for the sale of high quality fiberglass reinforcements, which are several times higher than its competitors</div>
-                        <div class="main__link"><a href="#">View work</a></div>
+                        <div class="main__link"><a href="#" class="underline">View work</a></div>
                     </div>
                     <div class="right-side">
-                        <img src="./img/novtex_main.png" alt="" class="right-side__img">
+                        <img src="./img/novtex_main-min.png" alt="" class="right-side__img">
                     </div>
                 </div>
             </div>
@@ -181,10 +244,10 @@
                         <div class="main__caption">WEB DESIGN</div>
                         <div class="main__title">SNK</div>
                         <div class="main__caption">This is a company that since 2001 has a positive experience for the supply of MRI for the needs of leading companies in the oil industry</div>
-                        <div class="main__link"><a href="#">View work</a></div>
+                        <div class="main__link"><a href="#" class="underline">View work</a></div>
                     </div>
                     <div class="right-side">
-                        <img src="./img/snk_main.png" alt="" class="right-side__img">
+                        <img src="./img/snk_main-min.png" alt="" class="right-side__img">
                     </div>
                 </div>
             </div>
@@ -194,10 +257,10 @@
                         <div class="main__caption">WEB DESIGN</div>
                         <div class="main__title">Ideal Solution</div>
                         <div class="main__caption">The ideology of the company is focused on customer problems, liability otnsitsya to every detail of the event and takes into account all the wishes at any stage of the project</div>
-                        <div class="main__link"><a href="#">View work</a></div>
+                        <div class="main__link"><a href="#" class="underline">View work</a></div>
                     </div>
                     <div class="right-side">
-                        <img src="./img/ideal-solution_main.png" alt="" class="right-side__img">
+                        <img src="./img/ideal-solution_main-min.png" alt="" class="right-side__img">
                     </div>
                 </div>
             </div>

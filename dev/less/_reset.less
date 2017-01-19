@@ -18,7 +18,7 @@ a {
     z-index: 11;
 
     &.line-through {
-        padding: 0 @step-xs;
+        padding: 0;
         position: relative;
 
         &:after {
@@ -28,17 +28,33 @@ a {
             left: 0;
             width: 0;
             right: auto;
-            height: 1px;
+            height: 2px;
             background-color: @c-white;
-            transition: width .3s;
+            transition: width .25s;
         }
 
         &:hover, &:active, &:focus, &[active] {
             &:after {
                 width: 100%;
-                transition: width .3s;
+                transition: width .25s;
                 color: inherit;
             }
+        }
+    }
+    &.underline {
+        text-decoration: none;
+        position: relative;
+        
+        &:after {
+            content: " ";
+            position: absolute;
+            bottom: -2px; 
+            left: 0;
+            right: 0;
+            
+            height: 1px;
+            background-color: @c-white;
+        
         }
     }
 }

@@ -11,7 +11,6 @@ html {
 body {
   font-family: 'Montserrat';
   color: #fff;
-  background-color: #000;
 }
 a {
   color: inherit;
@@ -59,10 +58,28 @@ a.underline:after {
 /* -------------------- Colors ---------------------- */
 /* -------------------- Fonts ---------------------- */
 /* -------------------- Steps ---------------------- */
+.button {
+  width: 170px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  background-color: #2470cf;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: rgba(36, 112, 207, 0.9);
+}
 /* ---------------------- Components ----------------------- */
 /* ----------------------- Import -------------------------- */
 .nav-on-scroll {
   position: fixed;
+}
+.nav {
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -72,8 +89,6 @@ a.underline:after {
   font-size: 1.3rem;
   box-sizing: border-box;
   z-index: 10;
-}
-.nav {
   font-size: 0;
 }
 .nav__links {
@@ -185,6 +200,10 @@ a.underline:after {
   width: 30px;
   background-color: #fff;
 }
+.footer .footer__offset {
+  display: inline-block;
+  width: 300px;
+}
 .social-list {
   text-align: right;
 }
@@ -210,6 +229,66 @@ a.underline:after {
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
+}
+.wrapper-base {
+  display: block;
+}
+.wrapper-base__link {
+  margin-top: 100px;
+  width: 100%;
+  height: 240px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.wrapper-base__link a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+.wrapper-base__link a:before {
+  content: ' ';
+  height: 240px;
+  width: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.wrapper-base__link a:hover .wrapper-base__link__arrow:after {
+  right: calc(50% - 17px);
+  opacity: .5;
+}
+.wrapper-base__link a > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.wrapper-base__link__title {
+  color: #000;
+  opacity: .5;
+}
+.wrapper-base__link__project {
+  font-size: 4rem;
+  color: #000;
+  font-family: 'Montserrat Bold';
+}
+.wrapper-base__link__arrow {
+  width: 100px;
+  display: block;
+  height: 24px;
+  position: relative;
+  margin: 0 auto;
+}
+.wrapper-base__link__arrow:after {
+  content: ' ';
+  position: absolute;
+  top: calc(50% - 24px / 2);
+  right: 80%;
+  transition: all 1s;
+  opacity: 0;
+  background-image: url('../img/arrow_b.png');
+  background-size: 100%;
+  height: 24px;
+  width: 35px;
+  background-repeat: no-repeat;
 }
 .main {
   margin: auto;
@@ -295,6 +374,9 @@ a.underline:after {
   width: 80%;
   max-width: 620px;
 }
+.main__form_hide {
+  display: none !important;
+}
 .main__form form {
   margin-top: 50px;
   text-align: left;
@@ -327,6 +409,39 @@ a.underline:after {
   cursor: pointer;
 }
 .main__form__submit:hover {
+  background-color: rgba(36, 112, 207, 0.9);
+}
+.main__form__alert_hide {
+  display: none !important;
+}
+.main__form__alert__caption {
+  display: inline-block;
+  margin-top: 30px;
+  width: 340px;
+  font-size: 1rem;
+  line-height: 24px;
+  vertical-align: top;
+  font-size: 1.3rem;
+  opacity: .5;
+  font-family: 'Montserrat Light';
+  line-height: 25px;
+}
+.main__form__alert__submit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 170px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  background-color: #2470cf;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.main__form__alert__submit:hover {
   background-color: rgba(36, 112, 207, 0.9);
 }
 .keep-touch {
@@ -371,6 +486,178 @@ a.underline:after {
   font-size: inherit;
   height: 30px;
   line-height: 30px;
+}
+.banner {
+  width: 100%;
+  height: 570px;
+  background-color: #000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  display: block;
+}
+.banner_tl {
+  background-image: url('../img/toplombard/00.jpg');
+}
+.banner_it {
+  background-image: url('../img/itima/00.jpg');
+}
+.banner_nt {
+  background-image: url('../img/novteh/00.jpg');
+}
+.banner_snk {
+  background-image: url('../img/snk/00.jpg');
+}
+.banner_is {
+  background-image: url('../img/ideal_solution/00.jpg');
+}
+.container {
+  width: calc(100% - (30px * 2));
+  max-width: 1500px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  font-size: 0;
+}
+.container__title {
+  margin-top: 120px;
+  text-align: center;
+  font-size: 2rem;
+  color: #000;
+  font-family: 'Montserrat Bold';
+}
+.container__text {
+  font-size: 1.3rem;
+  color: #000;
+  font-family: 'Montserrat Light';
+  opacity: .5;
+  max-width: 490px;
+  margin: 40px auto;
+  text-align: center;
+}
+.container__left {
+  display: inline-block;
+  width: 50%;
+  padding-left: 90px;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+.container__left .container__title {
+  text-align: left;
+  margin-top: 0;
+}
+.container__right {
+  display: inline-block;
+  width: 50%;
+  padding-right: 90px;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+.container__right .container__text {
+  max-width: 340px;
+  text-align: left;
+  margin: 0 auto;
+}
+.container .container__img {
+  margin-top: 120px;
+}
+.container .container__img img {
+  width: 100%;
+  height: auto;
+}
+.header {
+  width: 100%;
+  top: -190px;
+  left: 0;
+  right: 0;
+  position: relative;
+  margin-bottom: -70px;
+}
+.header:after {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  content: ' ';
+  border: 15px solid transparent;
+}
+.header_tl {
+  background-color: #000;
+}
+.header_tl:after {
+  border-top-color: #000;
+}
+.header_it {
+  background-color: #9c2856;
+}
+.header_it:after {
+  border-top-color: #9c2856;
+}
+.header_nt {
+  background-color: #1e272b;
+}
+.header_nt:after {
+  border-top-color: #1e272b;
+}
+.header_snk {
+  background-color: #479c38;
+}
+.header_snk:after {
+  border-top-color: #479c38;
+}
+.header_is {
+  background-color: #633978;
+}
+.header_is:after {
+  border-top-color: #633978;
+}
+.header .main {
+  width: 100%;
+  padding: 90px;
+  box-sizing: border-box;
+}
+.header .main .left-side {
+  width: 50%;
+  height: auto;
+  opacity: 1;
+  padding: 0;
+}
+.header .main .right-side {
+  width: 50%;
+  height: auto;
+  opacity: 1;
+  padding: 0;
+}
+.description-list {
+  text-align: left;
+  display: inline-block;
+  margin: 0 auto;
+}
+.description-list__item__title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  opacity: .5;
+  margin-bottom: 10px;
+}
+.description-list__item__text {
+  font-size: 1.3rem;
+}
+.description-list__item + .description-list__item {
+  margin-top: 30px;
+}
+.base-footer {
+  background-color: #000;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 70px;
+}
+.base-footer .social-list {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.base-footer__copyright {
+  opacity: .5;
+  font-family: 'Montserrat Light';
 }
 /* Overwriting fullPage.js tooltip color
 * --------------------------------------- */
@@ -561,15 +848,6 @@ a.underline:after {
 .md .container {
   background: #fff;
   min-height: 100%;
-}
-.md-close {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  width: 16px;
-  height: 16px;
-  background-repeat: no-repeat;
-  cursor: pointer;
 }
 .md-modal {
   position: fixed;
@@ -821,6 +1099,15 @@ a.underline:after {
   display: block;
   font-size: 10.5px;
   letter-spacing: .1em;
+}
+.close__btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 .close,
 .contact-modal .contact-modal-content,
@@ -1226,4 +1513,10 @@ body[data-state=intro] .contact-modal .close:hover span:nth-child(2)::before {
   width: 0;
   height: 100%;
   vertical-align: middle;
+}
+.overflow-auto {
+  overflow: auto;
+}
+.pos-rel {
+  position: relative;
 }

@@ -4,6 +4,85 @@
     height: 100vh;
     box-sizing: border-box;
 
+    //.wrapper-base
+    &-base {
+        display: block;
+        
+
+        //.wrapper-base__link
+        &__link {
+            // font-size: 0;
+            margin-top: 100px;
+            width: 100%;
+            height: 240px;
+            border-top: 1px solid fade(@c-black, 10%);
+
+            a {
+                width: 100%;
+                height: 100%;
+                display: block;
+                text-align: center;
+                position: relative;
+
+                &:before {
+                    content: ' ';
+                    height: 240px;
+                    width: 0;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                &:hover {
+                    .wrapper-base__link__arrow:after {
+                        right: calc(~'50% - 17px'); 
+                        opacity: .5;
+                    }
+                }
+
+                & > div {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+
+            //.wrapper-base__link__title
+            &__title {
+                // fz
+                color: @c-black;
+                opacity: .5;
+            }
+
+            //.wrapper-base__link__project
+            &__project {
+                font-size: 4rem;
+                color: @c-black;
+                font-family: @font-bd;
+            }
+            //.wrapper-base__link__arrow
+            &__arrow {
+                width: 100px;
+                display: block;
+                height: 24px;
+                position: relative;
+                margin: 0 auto;
+
+                &:after {
+                    content: ' ';
+                    position: absolute;
+                    top: calc(~'50% - 24px / 2');
+                    right: 80%;
+                    transition: all 1s;
+                    opacity: 0;
+                    background-image: url('../img/arrow_b.png');
+                    background-size: 100%;
+                    height: 24px;
+                    width: 35px;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+
     // padding: 137px @step-xxl 120px @step-xxl;
 }
 
@@ -109,6 +188,11 @@
     &__form {
         width: 80%;
         max-width: 620px; 
+
+        //.main__form_hide
+        &_hide {
+            display: none !important;
+        }
         
         form {
             margin-top: @step-xl;
@@ -135,19 +219,35 @@
 
         //.main__form__submit
         &__submit {
-            width: 170px;
-            height: @step-xl;
-            line-height: @step-xl;
-            color: @c-white;
-            background-color: @c-blue;
-            font-size: 1rem;
-            text-transform: uppercase;
-            border: none;
-            margin-top: 25px;
-            cursor: pointer;
+            .button;
+        }
 
-            &:hover {
-                background-color: fade(@c-blue, 90%);
+        //.main__form__alert
+        &__alert {
+
+            //.main__form__alert_hide
+            &_hide {
+                display: none !important;
+            }
+            //.main__form__alert__caption
+            &__caption {
+                display: inline-block;
+                margin-top: @step-m;
+                width: 340px;
+                font-size: 1rem;
+                line-height: 24px;
+                vertical-align: top;
+                font-size: 1.3rem;
+                opacity: .5;
+                font-family: @font-lt;
+                line-height: 25px;
+            }
+            //.main__form__alert__submit
+            &__submit {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                .button;
             }
         }
     }

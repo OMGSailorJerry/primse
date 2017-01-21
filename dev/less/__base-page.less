@@ -1,0 +1,215 @@
+.banner {
+    width: 100%;
+    height: 570px;
+    background-color: @c-black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: block;
+
+    //.banner_tl
+    &_tl  {
+        background-image: url('../img/toplombard/00.jpg');
+    }
+
+    //.banner_it
+    &_it {
+        background-image: url('../img/itima/00.jpg')
+    }
+    
+    //.banner_nt
+    &_nt {
+        background-image: url('../img/novteh/00.jpg')
+    }
+    
+    //.banner_snk
+    &_snk  {
+        background-image: url('../img/snk/00.jpg')
+    }
+    
+    //.banner_is
+    &_is {
+        background-image: url('../img/ideal_solution/00.jpg')
+    }
+}
+
+.container {
+    width: calc(~'100% - (@{step-m} * 2)');
+    max-width: 1500px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    font-size: 0;
+    
+    //.container__title
+    &__title {
+        margin-top: 120px;
+        text-align: center;
+        font-size: 2rem;
+        color: @c-black;
+        font-family: @font-bd;
+    }
+    
+    //.container__text
+    &__text {
+        font-size: 1.3rem;
+        color: @c-black;
+        font-family: @font-lt;
+        opacity: .5;
+        max-width: 490px;
+        margin: @step-l auto;
+        text-align: center;
+    }
+    
+    //.container__left
+    &__left {
+        display: inline-block;
+        width: 50%;
+        padding-left: 90px;
+        box-sizing: border-box;
+        vertical-align: top;
+
+        .container__title {
+            text-align: left;
+            margin-top: 0;
+        }
+    }
+    //.container__right
+    &__right {
+        display: inline-block;
+        width: 50%;
+        padding-right: 90px;
+        box-sizing: border-box;
+        vertical-align: top;
+
+        .container__text {
+             max-width: 340px;
+             text-align: left;
+             margin: 0 auto;
+        }
+    }
+
+    .container__img {
+        margin-top: 120px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.header {
+    width: 100%;
+    top: -190px;
+    left: 0;
+    right: 0;  
+    position: relative;
+    margin-bottom: -70px;
+
+    &:after {
+        position: absolute;
+        bottom: -@step-m;
+        left: 50%;
+        content: ' ';
+        border: 15px solid transparent;
+    }
+
+    &_tl  {
+        background-color: @c-black;
+
+        &:after {
+            border-top-color: @c-black;
+        }
+    }
+    &_it {
+        background-color: @c-magn;
+
+        &:after {
+            border-top-color: @c-magn;
+        }
+    }
+    &_nt {
+        background-color: @c-anthr;
+
+        &:after {
+            border-top-color: @c-anthr;
+        }
+    }
+    &_snk  {
+        background-color: @c-green;
+
+        &:after {
+            border-top-color: @c-green;
+        }
+    }
+    &_is {
+        background-color: @c-purp;
+
+        &:after {
+            border-top-color: @c-purp;
+        }
+    }
+
+    .main {
+        width: 100%;
+        padding: 90px;
+        box-sizing: border-box;
+
+        .left-side{
+            width: 50%;
+            height: auto;
+            opacity: 1;
+            padding: 0;
+        }
+        .right-side {
+            width: 50%;
+            height: auto;
+            opacity: 1;
+            padding: 0; 
+        }
+    }
+}
+.description-list {
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+    //.description-list__item
+    &__item {
+
+        //.description-list__item__title
+        &__title {
+            font-size: 1rem;
+            text-transform: uppercase;
+            opacity: .5;
+            margin-bottom: @step-xs;
+        }
+
+        //.description-list__item__text
+        &__text {
+            font-size: 1.3rem;
+        }    
+
+        & + & {
+            margin-top: @step-m;
+        }
+    }
+}
+
+.base-footer {
+    background-color: @c-black;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 70px;
+
+    & .social-list {
+        text-align: center;
+        margin-top: @step-m;
+        margin-bottom: @step-m;
+    }
+
+    //.base-footer__copyright
+    &__copyright {
+        opacity: .5;
+        font-family: @font-lt;
+    }
+}

@@ -1,22 +1,10 @@
 $(document).ready(function() {
-    /*
-    * Plugin intialization
-    */
-    $('#pagepiling').pagepiling({
-        direction: 'horizontal',
-        menu: '#menu',
-        anchors: ['page0', 'page1', 'page2', 'page3', 'page4', 'page5'],
-        sectionsColor: ['#000', '#fff', '#9c2856', '#1e272b', '#479c38', '#633978'],
-        navigation: true,
-        afterRender: function(){
-            $('#pp-nav').addClass('custom');
-        },
-        afterLoad: function(anchorLink, index){
-            if(index>1){
-                $('#pp-nav').removeClass('custom');
-            }else{
-                $('#pp-nav').addClass('custom');
-            }
-        }
+    $('[data-type=sendButton]').on('click', function(){ 
+        $('.main__form').addClass('main__form_hide');
+        $('.main__form__alert_hide').removeClass('main__form__alert_hide');
     });
 });
+
+function reloadPage() {
+    location.reload();
+}

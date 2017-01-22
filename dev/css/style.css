@@ -122,11 +122,14 @@ a.underline:after {
   display: inline-block;
   font-size: 1.3rem;
   text-align: right;
-  opacity: .5;
   line-height: 37px;
   vertical-align: top;
 }
-.nav__contact:hover {
+.nav__contact__link {
+  display: inline-block;
+  opacity: .5;
+}
+.nav__contact__link:hover {
   opacity: 1;
 }
 .nav__contact__icon {
@@ -255,9 +258,12 @@ a.underline:after {
   display: inline-block;
   vertical-align: middle;
 }
+.wrapper-base__link a:hover .wrapper-base__link__title,
+.wrapper-base__link a:hover .wrapper-base__link__project {
+  color: #fff;
+}
 .wrapper-base__link a:hover .wrapper-base__link__arrow:after {
-  right: calc(50% - 17px);
-  opacity: .5;
+  background-image: url('../img/arrow_w.png');
 }
 .wrapper-base__link a > div {
   display: inline-block;
@@ -266,26 +272,28 @@ a.underline:after {
 .wrapper-base__link__title {
   color: #000;
   opacity: .5;
+  transition: all 350ms linear;
 }
 .wrapper-base__link__project {
   font-size: 4rem;
   color: #000;
   font-family: 'Montserrat Bold';
+  transition: all 350ms linear;
 }
 .wrapper-base__link__arrow {
   width: 100px;
   display: block;
   height: 24px;
   position: relative;
-  margin: 0 auto;
+  margin: 10px auto 0 auto;
 }
 .wrapper-base__link__arrow:after {
   content: ' ';
   position: absolute;
   top: calc(50% - 24px / 2);
-  right: 80%;
-  transition: all 1s;
-  opacity: 0;
+  right: calc(50% - 17px);
+  transition: all 350ms;
+  opacity: .5;
   background-image: url('../img/arrow_b.png');
   background-size: 100%;
   height: 24px;
@@ -320,7 +328,7 @@ a.underline:after {
   font-size: 1.3rem;
   opacity: .5;
   font-family: 'Montserrat Light';
-  line-height: 25px;
+  line-height: 30px;
 }
 .main__link {
   margin-top: 30px;
@@ -350,8 +358,8 @@ a.underline:after {
   margin-top: 20px;
 }
 .main .left-side .main__caption {
-  font-size: 1rem;
-  max-width: 360px;
+  font-size: 1.3rem;
+  max-width: 470px;
 }
 .main .right-side {
   display: inline-block;
@@ -497,6 +505,20 @@ a.underline:after {
   background-repeat: no-repeat;
   background-position: center top;
   display: block;
+  position: relative;
+}
+.banner:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 54%, rgba(0, 0, 0, 0) 100%);
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 54%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 54%, rgba(0, 0, 0, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000', GradientType=0);
 }
 .banner_tl {
   background-image: url('../img/toplombard/00.jpg');
@@ -515,7 +537,7 @@ a.underline:after {
 }
 .container {
   width: calc(100% - (30px * 2));
-  max-width: 1500px;
+  max-width: 1350px;
   margin: 0 auto;
   display: block;
   position: relative;
@@ -536,6 +558,7 @@ a.underline:after {
   max-width: 490px;
   margin: 40px auto;
   text-align: center;
+  line-height: 30px;
 }
 .container__left {
   display: inline-block;
@@ -983,9 +1006,9 @@ a.underline:after {
   -moz-transform: scaleY(0);
   -ms-transform: scaleY(0);
   transform: scaleY(0);
-  -webkit-transition: all 700ms linear;
-  -moz-transition: all 700ms linear;
-  transition: all 700ms linear;
+  -webkit-transition: all 350ms linear;
+  -moz-transition: all 350ms linear;
+  transition: all 350ms linear;
 }
 .md-effect-1 .md-content > * {
   opacity: 0;
@@ -1001,7 +1024,7 @@ a.underline:after {
 }
 .md-show.md-effect-1 .md-content > * {
   opacity: 1;
-  transition: all 900ms cubic-bezier(1, -0.58, 1, 0.88);
+  transition: all 450ms cubic-bezier(1, -0.58, 1, 0.88);
 }
 @media screen and (max-width: 32em) {
   body {
@@ -1045,7 +1068,7 @@ a.underline:after {
   position: absolute;
   top: calc(50% - 24px / 2);
   right: 7%;
-  transition: all 1s;
+  transition: all 500ms;
   opacity: 0;
   background-image: url('../img/arrow_w.png');
   background-size: 100%;
@@ -1077,6 +1100,9 @@ a.underline:after {
 }
 .projects__item_is:hover {
   background-color: #633978;
+}
+.projects__item_contacts:hover {
+  background-color: #2470cf;
 }
 .projects__item a {
   display: block;
@@ -1134,6 +1160,7 @@ nav[data-state=project] a {
 .close {
   width: 16px;
   height: 16px;
+  transform: scale(2);
 }
 .close span::before {
   -webkit-transform: rotate(45deg) translateZ(0) scale(1, 1);

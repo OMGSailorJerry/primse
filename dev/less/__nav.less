@@ -64,14 +64,18 @@
         display: inline-block;
         font-size: 1.3rem;
         text-align: right;
-        opacity: .5;
         line-height: 37px;
         vertical-align: top;
 
-        &:hover {
-            opacity: 1;
+        //.nav__contact__link
+        &__link {
+            display: inline-block;
+            opacity: .5;
+            &:hover {
+                opacity: 1;
+            }
         }
-        //nav__contact__icon
+        //.nav__contact__icon
         &__icon {
             display: inline-block;
             margin-top: 13px;
@@ -87,7 +91,7 @@
             }
         }
 
-        //nav__contact__text
+        //.nav__contact__text
         &__text {
             display: inline-block;
             vertical-align: top;

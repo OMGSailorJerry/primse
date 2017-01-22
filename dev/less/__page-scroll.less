@@ -36,13 +36,18 @@
     // [data-menuanchor="page1"] {
     //     opacity: 1;
     // }
+    a.underline {
+        &:after {
+            background-color: @c-black;
+        }
+    } 
     .nav-on-scroll {
         color: @c-black;  
         a.line-through {
             &:after {
                 background-color: @c-black;
             }
-        }  
+        } 
         .nav__brand__logo {
             display: none;
         }

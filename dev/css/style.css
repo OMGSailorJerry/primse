@@ -92,7 +92,7 @@ a.underline:after {
   font-size: 0;
 }
 .nav__links {
-  width: calc((100% - 157px) / 2);
+  width: calc((100% - 183px) / 2);
   display: inline-block;
   vertical-align: top;
 }
@@ -109,7 +109,7 @@ a.underline:after {
   margin-left: 40px;
 }
 .nav__brand {
-  width: 157px;
+  width: 183px;
   display: inline-block;
   text-align: center;
   vertical-align: top;
@@ -118,7 +118,7 @@ a.underline:after {
   display: none;
 }
 .nav__contact {
-  width: calc((100% - 157px) / 2);
+  width: calc((100% - 183px) / 2);
   display: inline-block;
   font-size: 1.3rem;
   text-align: right;
@@ -678,6 +678,9 @@ a.underline:after {
 .pp-viewing-page1 [data-anchor="page1"] .right-side {
   opacity: 1;
   transition: opacity 0.5s 0.5s;
+}
+.pp-viewing-page1 a.underline:after {
+  background-color: #000;
 }
 .pp-viewing-page1 .nav-on-scroll {
   color: #000;

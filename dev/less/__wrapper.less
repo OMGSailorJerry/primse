@@ -179,12 +179,16 @@
             right: @step-m;
             bottom: 0;
             // bottom: -@step-xl;
-            width: calc(~'100% - @{step-m} * 2');
+            // width: calc(~'100% - @{step-m} * 2');
             // opacity: 0;
             // transition: opacity .2s;
             // height: 100%;
             // width: 100%;
             height: auto;
+
+            @media (max-width: 1920px) {
+                width: calc(~'100% - @{step-m} * 2');
+            }
         }
     }
 

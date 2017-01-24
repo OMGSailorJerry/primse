@@ -377,8 +377,12 @@ a.underline:after {
   left: 30px;
   right: 30px;
   bottom: 0;
-  width: calc(100% - 30px * 2);
   height: auto;
+}
+@media (max-width: 1920px) {
+  .main .right-side__img {
+    width: calc(100% - 30px * 2);
+  }
 }
 .main__form {
   width: 80%;

@@ -552,6 +552,7 @@ a.underline:after {
   display: block;
   position: relative;
   font-size: 0;
+  padding-top: 120px;
 }
 .container__title {
   margin-top: 120px;
@@ -605,7 +606,7 @@ a.underline:after {
   top: -402px;
   left: 0;
   right: 0;
-  position: relative;
+  position: absolute;
   margin-bottom: -70px;
 }
 .header:after {

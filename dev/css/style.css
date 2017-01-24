@@ -237,6 +237,11 @@ a.underline:after {
 }
 .wrapper-base {
   display: block;
+  padding-top: 570px;
+}
+.wrapper-base .wrapper__parallax {
+  background-color: #fff;
+  margin-top: 212px;
 }
 .wrapper-base__link {
   margin-top: 100px;
@@ -509,7 +514,8 @@ a.underline:after {
   background-repeat: no-repeat;
   background-position: center top;
   display: block;
-  position: relative;
+  position: fixed;
+  z-index: -1;
 }
 .banner:before {
   content: ' ';
@@ -596,7 +602,7 @@ a.underline:after {
 }
 .header {
   width: 100%;
-  top: -190px;
+  top: -402px;
   left: 0;
   right: 0;
   position: relative;

@@ -6,7 +6,8 @@
     background-repeat: no-repeat;
     background-position: center top;
     display: block;
-    position: relative;
+    position: fixed;
+    z-index: -1;
 
     &:before {
         content: ' ';
@@ -56,6 +57,7 @@
     display: block;
     position: relative;
     font-size: 0;
+    padding-top: 120px;
     
     //.container__title
     &__title {
@@ -117,10 +119,10 @@
 
 .header {
     width: 100%;
-    top: -190px;
+    top: -402px;
     left: 0;
     right: 0;  
-    position: relative;
+    position: absolute;
     margin-bottom: -70px;
 
     &:after {

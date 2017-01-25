@@ -17,7 +17,7 @@
     left: 0;
     right: 0;
     width: 100%;
-    padding: @step-xl @step-xxl;
+    padding: @step-xl @step-xl 0;
     color: @c-white;
     font-size: 1.3rem;
     box-sizing: border-box;
@@ -98,4 +98,23 @@
             margin-left: 5px;
         }
     }
+}
+.ha-header-hide {
+    & .nav {
+        transition: all 0.2s;
+        transition-delay: 1s;
+    }
+}
+
+.ha-header-hide, .ha-header-small {
+    & .nav {
+        padding: @step-xs @step-xl;
+        background-color: @c-black;
+    }
+}
+
+.ha-header {
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition: all 1s;
 }

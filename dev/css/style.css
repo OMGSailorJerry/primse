@@ -84,7 +84,7 @@ a.underline:after {
   left: 0;
   right: 0;
   width: 100%;
-  padding: 50px 60px;
+  padding: 50px 50px 0;
   color: #fff;
   font-size: 1.3rem;
   box-sizing: border-box;
@@ -144,6 +144,20 @@ a.underline:after {
   display: inline-block;
   vertical-align: top;
   margin-left: 5px;
+}
+.ha-header-hide .nav {
+  transition: all 0.2s;
+  transition-delay: 1s;
+}
+.ha-header-hide .nav,
+.ha-header-small .nav {
+  padding: 10px 50px;
+  background-color: #000;
+}
+.ha-header {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
 }
 .footer {
   position: fixed;
@@ -237,7 +251,7 @@ a.underline:after {
 }
 .wrapper-base {
   display: block;
-  padding-top: 570px;
+  padding-top: 330px;
 }
 .wrapper-base .wrapper__parallax {
   background-color: #fff;
@@ -515,6 +529,7 @@ a.underline:after {
   background-position: center top;
   display: block;
   position: fixed;
+  top: 0;
   z-index: -1;
 }
 .banner:before {

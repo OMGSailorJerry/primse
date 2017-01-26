@@ -324,6 +324,7 @@ a.underline:after {
   margin: auto;
   text-align: center;
   width: 95%;
+  max-height: 402px;
   max-width: 1500px;
   color: #fff;
   font-size: 0;

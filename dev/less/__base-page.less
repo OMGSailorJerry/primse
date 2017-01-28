@@ -115,6 +115,32 @@
             width: 100%;
             height: auto;
         }
+
+        //.container__img__text
+        &__text {
+            position: absolute;
+            top: 20%;
+            right: 0;
+            width: 40%;
+            //.container__img__text__title
+            &__title {
+                font-size: 4rem;
+                color: @c-white;
+                font-family: @font-bd;
+            }
+            
+            //.container__img__text__caption
+            &__caption {
+                margin-top: @step-m;
+                font-size: 1.3rem;
+                color: @c-white;
+                font-family: @font-lt;
+                opacity: .5;
+                max-width: 200px;
+                line-height: @step-m;
+
+            }
+        }
     }
 }
 

@@ -52,6 +52,18 @@
         text-align: center;
         vertical-align: top;
 
+        &:before {
+            content: ' ';
+            height: 37px;
+            width: 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        & a {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
         //.nav__brand__logo_on-white
         &__logo_on-white {
             display: none;
@@ -111,12 +123,12 @@
         padding: @step-xs @step-xl;
         background-color: @c-black;
 
-        // & .nav__brand a img {
-        //     height: @step-m;
-        //     padding-top: 13px;
-        //     transition: all 0.2s;
-        //     transition-delay: 1s;
-        // }
+        & .nav__brand a img {
+            height: 15px;
+            // padding-top: 13px;
+            // transition: all 0.2s;
+            // transition-delay: 1s;
+        }
     }
 }
 

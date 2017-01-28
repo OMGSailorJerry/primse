@@ -334,14 +334,14 @@
   background: fade(@c-blue, 80%) url(../img/cd-top-arrow.svg) no-repeat center 50%;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
-  -moz-transition: opacity .3s 0s, visibility 0s .3s;
-  transition: opacity .3s 0s, visibility 0s .3s;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s, bottom .3s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s, bottom .3s 0s;
+  transition: opacity .3s 0s, visibility 0s .3s, bottom .3s 0s;
 }
 .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
-  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
-  -moz-transition: opacity .3s 0s, visibility 0s 0s;
-  transition: opacity .3s 0s, visibility 0s 0s;
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s, bottom .3s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s, bottom .3s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s, bottom .3s 0s;
 }
 .cd-top.cd-is-visible {
   /* the button becomes visible */
@@ -350,7 +350,7 @@
 }
 .cd-top.cd-fade-out {
   /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-  opacity: .3;
+//   opacity: .3;
 }
 .no-touch .cd-top:hover {
   background-color: @c-blue;
@@ -367,7 +367,7 @@
     height: 60px;
     width: 60px;
     right: 30px;
-    bottom: 550px;
+    bottom: 30px;
   }
 }
 
@@ -375,8 +375,10 @@
   /* the button becomes visible */
   visibility: visible;
   opacity: 1;
+  bottom: 30px;
 }
 .cd-top.cd-fade-out {
   /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-  opacity: .3;
+
+  bottom: 550px;
 }

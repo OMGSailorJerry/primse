@@ -33,11 +33,12 @@ $(document).ready(function() {
             }
         }, { offset: '220px' } );
     });
-
+    
+    // console.log($('wrapper')['0'].clientHeight);
     // browser window scroll (in pixels) after which the "back to top" link is shown
-	var offset = 4500,
+	var offset = 1500,
 		//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
-		offset_opacity = 4500,
+        // offset_opacity = $('wrapper')['0'].clientHeight - 500,
 		//duration of the top scrolling animation (in ms)
 		scroll_top_duration = 700,
 		//grab the "back to top" link
@@ -45,8 +46,8 @@ $(document).ready(function() {
 
 	//hide or show the "back to top" link
 	$(window).scroll(function(){
-		( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-		if( $(this).scrollTop() > offset_opacity ) { 
+		( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible').removeClass('cd-fade-out') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+		if( $(this).scrollTop() > $('wrapper')['0'].clientHeight - 1000 ) { 
 			$back_to_top.addClass('cd-fade-out');
 		}
 	});

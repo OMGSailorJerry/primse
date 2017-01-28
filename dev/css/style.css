@@ -115,6 +115,17 @@ a.underline:after {
   text-align: center;
   vertical-align: top;
 }
+.nav__brand:before {
+  content: ' ';
+  height: 37px;
+  width: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.nav__brand a {
+  display: inline-block;
+  vertical-align: middle;
+}
 .nav__brand__logo_on-white {
   display: none;
 }
@@ -154,6 +165,10 @@ a.underline:after {
 .ha-header-small .nav {
   padding: 10px 50px;
   background-color: #000;
+}
+.ha-header-hide .nav .nav__brand a img,
+.ha-header-small .nav .nav__brand a img {
+  height: 15px;
 }
 .ha-header {
   -webkit-transition: all 1s;
@@ -540,16 +555,16 @@ a.underline:after {
   background: rgba(36, 112, 207, 0.8) url(../img/cd-top-arrow.svg) no-repeat center 50%;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
-  -moz-transition: opacity .3s 0s, visibility 0s .3s;
-  transition: opacity .3s 0s, visibility 0s .3s;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s, bottom .3s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s, bottom .3s 0s;
+  transition: opacity .3s 0s, visibility 0s .3s, bottom .3s 0s;
 }
 .cd-top.cd-is-visible,
 .cd-top.cd-fade-out,
 .no-touch .cd-top:hover {
-  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
-  -moz-transition: opacity .3s 0s, visibility 0s 0s;
-  transition: opacity .3s 0s, visibility 0s 0s;
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s, bottom .3s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s, bottom .3s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s, bottom .3s 0s;
 }
 .cd-top.cd-is-visible {
   /* the button becomes visible */
@@ -558,7 +573,6 @@ a.underline:after {
 }
 .cd-top.cd-fade-out {
   /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-  opacity: .3;
 }
 .no-touch .cd-top:hover {
   background-color: #2470cf;
@@ -575,17 +589,18 @@ a.underline:after {
     height: 60px;
     width: 60px;
     right: 30px;
-    bottom: 550px;
+    bottom: 30px;
   }
 }
 .cd-top.cd-is-visible {
   /* the button becomes visible */
   visibility: visible;
   opacity: 1;
+  bottom: 30px;
 }
 .cd-top.cd-fade-out {
   /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
-  opacity: .3;
+  bottom: 550px;
 }
 .banner {
   width: 100%;
@@ -682,6 +697,26 @@ a.underline:after {
 .container .container__img img {
   width: 100%;
   height: auto;
+}
+.container .container__img__text {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 40%;
+}
+.container .container__img__text__title {
+  font-size: 4rem;
+  color: #fff;
+  font-family: 'Montserrat Bold';
+}
+.container .container__img__text__caption {
+  margin-top: 30px;
+  font-size: 1.3rem;
+  color: #fff;
+  font-family: 'Montserrat Light';
+  opacity: .5;
+  max-width: 200px;
+  line-height: 30px;
 }
 .header {
   width: 100%;
@@ -1142,7 +1177,6 @@ a.underline:after {
   padding-left: 120px;
   text-align: left;
   background-color: transparent;
-  transition: all 350ms linear;
 }
 .projects__item:before {
   position: absolute;

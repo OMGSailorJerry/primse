@@ -59,6 +59,11 @@
     position: relative;
     font-size: 0;
     padding-top: 120px;
+
+    @media @1024 {
+        width: calc(~'100% - (@{step-s} * 2)');
+        padding-top: 100px;
+    }
     
     //.container__title
     &__title {
@@ -67,6 +72,10 @@
         font-size: 2rem;
         color: @c-black;
         font-family: @font-bd;
+        
+        @media @1024 {
+            margin-top: 100px;
+        }
     }
     
     //.container__text
@@ -79,6 +88,10 @@
         margin: @step-l auto;
         text-align: center;
         line-height: @step-m;
+
+        @media @1024 {
+            font-size: 1.15rem;
+        }
     }
     
     //.container__left
@@ -93,6 +106,10 @@
             text-align: left;
             margin-top: 0;
         }
+
+        @media @1024 {
+            padding-left: @step-xs;
+        }
     }
     //.container__right
     &__right {
@@ -102,15 +119,30 @@
         box-sizing: border-box;
         vertical-align: top;
 
+        @media @1024 {
+            padding-right: @step-m;
+            text-align: right;
+        }
+
         .container__text {
              max-width: 340px;
              text-align: left;
              margin: 0 auto;
+            
+            @media @1024 {
+                max-width: 280px;
+                float: right;
+            }
         }
     }
 
     .container__img {
         margin-top: 120px;
+
+        @media @1024 {
+            margin-top: 100px;
+        }
+
         img {
             width: 100%;
             height: auto;
@@ -152,10 +184,16 @@
     position: absolute;
     margin-bottom: -70px;
 
+    @media @1024 {
+        height: 297px;
+        top: -297px;
+    }
+    
+
     &:after {
         position: absolute;
         bottom: -@step-m;
-        left: 50%;
+        left: calc(~'50% - 15px');
         content: ' ';
         border: 15px solid transparent;
     }
@@ -201,6 +239,10 @@
         padding: 90px;
         box-sizing: border-box;
 
+        @media @1024 {
+            padding: 45px;
+        }
+
         .left-side{
             width: 50%;
             height: auto;
@@ -228,11 +270,19 @@
             text-transform: uppercase;
             opacity: .5;
             margin-bottom: @step-xs;
+
+            @media @1024 {
+                font-size: 1.15rem;
+                margin-bottom: 0;
+            }
         }
 
         //.description-list__item__text
         &__text {
             font-size: 1.3rem;
+            @media @1024 {
+                font-size: 1.15rem;
+            }
         }    
 
         & + & {

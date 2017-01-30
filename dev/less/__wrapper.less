@@ -8,6 +8,10 @@
     &-base {
         display: block;
         padding-top: 330px;
+
+        @media @1024 {
+            padding-top: 220px;
+        }
         
         .wrapper__parallax {
             background-color: @c-white;
@@ -155,10 +159,26 @@
         }
         .main__title {
             margin-top: @step-s;
+            
+            @media @1024 {
+                margin-top: 0;
+                font-size: 2.5rem;
+            }
         }
         .main__caption {
-            font-size: 1.3rem;
+            // font-size: 1.3rem;
             max-width: 470px;
+            @media @1024 {
+                font-size: 1rem;
+                max-width: 320px;
+            }
+
+            //.main__caption_tablet
+            &_tablet {
+                @media @1024 {
+                    font-size: .86rem;
+                }
+            }
         }
     }
     .right-side {

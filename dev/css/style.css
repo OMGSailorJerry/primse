@@ -59,6 +59,7 @@ a.underline:after {
 /* -------------------- Colors ---------------------- */
 /* -------------------- Fonts ---------------------- */
 /* -------------------- Steps ---------------------- */
+/* ----------------- Media Queries ------------------- */
 .button {
   width: 170px;
   height: 50px;
@@ -272,6 +273,11 @@ a.underline:after {
   display: block;
   padding-top: 330px;
 }
+@media (max-width: 1024px) {
+  .wrapper-base {
+    padding-top: 220px;
+  }
+}
 .wrapper-base .wrapper__parallax {
   background-color: #fff;
   margin-top: 212px;
@@ -396,9 +402,25 @@ a.underline:after {
 .main .left-side .main__title {
   margin-top: 20px;
 }
+@media (max-width: 1024px) {
+  .main .left-side .main__title {
+    margin-top: 0;
+    font-size: 2.5rem;
+  }
+}
 .main .left-side .main__caption {
-  font-size: 1.3rem;
   max-width: 470px;
+}
+@media (max-width: 1024px) {
+  .main .left-side .main__caption {
+    font-size: 1rem;
+    max-width: 320px;
+  }
+}
+@media (max-width: 1024px) {
+  .main .left-side .main__caption_tablet {
+    font-size: .86rem;
+  }
 }
 .main .right-side {
   display: inline-block;
@@ -651,12 +673,23 @@ a.underline:after {
   font-size: 0;
   padding-top: 120px;
 }
+@media (max-width: 1024px) {
+  .container {
+    width: calc(100% - (20px * 2));
+    padding-top: 100px;
+  }
+}
 .container__title {
   margin-top: 120px;
   text-align: center;
   font-size: 2rem;
   color: #000;
   font-family: 'Montserrat Bold';
+}
+@media (max-width: 1024px) {
+  .container__title {
+    margin-top: 100px;
+  }
 }
 .container__text {
   font-size: 1.3rem;
@@ -667,6 +700,11 @@ a.underline:after {
   margin: 40px auto;
   text-align: center;
   line-height: 30px;
+}
+@media (max-width: 1024px) {
+  .container__text {
+    font-size: 1.15rem;
+  }
 }
 .container__left {
   display: inline-block;
@@ -679,6 +717,11 @@ a.underline:after {
   text-align: left;
   margin-top: 0;
 }
+@media (max-width: 1024px) {
+  .container__left {
+    padding-left: 10px;
+  }
+}
 .container__right {
   display: inline-block;
   width: 50%;
@@ -686,13 +729,30 @@ a.underline:after {
   box-sizing: border-box;
   vertical-align: top;
 }
+@media (max-width: 1024px) {
+  .container__right {
+    padding-right: 30px;
+    text-align: right;
+  }
+}
 .container__right .container__text {
   max-width: 340px;
   text-align: left;
   margin: 0 auto;
 }
+@media (max-width: 1024px) {
+  .container__right .container__text {
+    max-width: 280px;
+    float: right;
+  }
+}
 .container .container__img {
   margin-top: 120px;
+}
+@media (max-width: 1024px) {
+  .container .container__img {
+    margin-top: 100px;
+  }
 }
 .container .container__img img {
   width: 100%;
@@ -726,10 +786,16 @@ a.underline:after {
   position: absolute;
   margin-bottom: -70px;
 }
+@media (max-width: 1024px) {
+  .header {
+    height: 297px;
+    top: -297px;
+  }
+}
 .header:after {
   position: absolute;
   bottom: -30px;
-  left: 50%;
+  left: calc(50% - 15px);
   content: ' ';
   border: 15px solid transparent;
 }
@@ -768,6 +834,11 @@ a.underline:after {
   padding: 90px;
   box-sizing: border-box;
 }
+@media (max-width: 1024px) {
+  .header .main {
+    padding: 45px;
+  }
+}
 .header .main .left-side {
   width: 50%;
   height: auto;
@@ -791,8 +862,19 @@ a.underline:after {
   opacity: .5;
   margin-bottom: 10px;
 }
+@media (max-width: 1024px) {
+  .description-list__item__title {
+    font-size: 1.15rem;
+    margin-bottom: 0;
+  }
+}
 .description-list__item__text {
   font-size: 1.3rem;
+}
+@media (max-width: 1024px) {
+  .description-list__item__text {
+    font-size: 1.15rem;
+  }
 }
 .description-list__item + .description-list__item {
   margin-top: 30px;

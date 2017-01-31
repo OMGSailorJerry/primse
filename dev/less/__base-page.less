@@ -106,6 +106,13 @@
             text-align: left;
             margin-top: 0;
         }
+        
+        @media @767 {
+            width: 100%;
+            .container__title {
+                text-align: center;
+            }
+        }
 
         @media @1024 {
             padding-left: @step-xs;
@@ -118,12 +125,7 @@
         padding-right: 90px;
         box-sizing: border-box;
         vertical-align: top;
-
-        @media @1024 {
-            padding-right: @step-m;
-            text-align: right;
-        }
-
+        
         .container__text {
              max-width: 340px;
              text-align: left;
@@ -133,6 +135,21 @@
                 max-width: 280px;
                 float: right;
             }
+
+            @media @767 {
+                margin-top: @step-m;
+                text-align: center;
+             }
+        }
+
+        @media @1024 {
+            padding-right: @step-m;
+            text-align: right;
+        }
+
+        @media @767 {
+            width: 100%;
+            padding-right: 0;
         }
     }
 
@@ -159,6 +176,10 @@
                 font-size: 4rem;
                 color: @c-white;
                 font-family: @font-bd;
+
+                @media @767 {
+                    font-size: 2rem;
+                }
             }
             
             //.container__img__text__caption
@@ -171,6 +192,12 @@
                 max-width: 200px;
                 line-height: @step-m;
 
+                @media @767 {
+                    font-size: .65rem;
+                    line-height: 1rem;
+                    max-width: 120px;
+                    margin-top: @step-xs;
+                }
             }
         }
     }
@@ -184,12 +211,16 @@
     position: absolute;
     margin-bottom: -70px;
 
+
     @media @1024 {
         height: 297px;
         top: -297px;
     }
     
-
+    @media @767 {
+        height: 490px;
+        top: -490px;
+    }
     &:after {
         position: absolute;
         bottom: -@step-m;
@@ -242,18 +273,32 @@
         @media @1024 {
             padding: 45px;
         }
-
+        @media @767 {
+            padding: @step-m;
+            height: 490px;
+            max-height: 490px;
+        }
         .left-side{
             width: 50%;
             height: auto;
             opacity: 1;
             padding: 0;
+         
+            @media @767 {
+                width: 100%;
+            }
         }
         .right-side {
             width: 50%;
             height: auto;
             opacity: 1;
             padding: 0; 
+         
+            @media @767 {
+                width: 100%;
+                text-align: left;
+                padding-top: @step-m;
+            }
         }
     }
 }
@@ -287,6 +332,10 @@
 
         & + & {
             margin-top: @step-m;
+
+            @media @767 {
+               margin-top: @step-s;
+            }
         }
     }
 }

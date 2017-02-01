@@ -6,7 +6,20 @@ $(document).ready(function() {
   
         $('.main__form__alert_hide').removeClass('main__form__alert_hide');
   
-  });
+    });
+
+    $('.burger').on('click', function() {
+        $( '#ha-header' ).css( "z-index", "65" );
+        $('.nav__links').addClass('nav__links_mobile-open');
+        
+    
+    });
+
+    $('.nav__links__close, .nav__links__item').on('click', function(){
+        
+        $('.nav__links').removeClass('nav__links_mobile-open');
+        $( '#ha-header' ).css( "z-index", "12" );
+    });
 
     var rellax = new Rellax('.rellax', {
 
@@ -25,7 +38,8 @@ $(document).ready(function() {
 
         $el.waypoint( function( direction ) {
             if( direction === 'down' && animClassDown ) {
-                // debugger
+                $('.nav__links').removeClass('nav__links_mobile-open');
+                $( '#ha-header' ).css( "z-index", "12" );
                 $head.attr('class', 'ha-header ' + animClassDown);
             }
             else if( direction === 'up' && animClassUp ){

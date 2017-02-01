@@ -123,7 +123,7 @@ a.underline:after {
 .nav__links__close {
   width: 25px;
   height: 25px;
-  display: block;
+  display: none;
   position: absolute;
   top: 30px;
   left: 30px;
@@ -131,6 +131,11 @@ a.underline:after {
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (max-width: 767px) {
+  .nav__links__close {
+    display: block;
+  }
 }
 .nav__links__item {
   display: inline-block;

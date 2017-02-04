@@ -47,6 +47,15 @@
                         background-image: url('../img/arrow_w.png');
                     }
                 }
+                
+                @media @767 {
+                    .wrapper-base__link__title, .wrapper-base__link__project {
+                        color: @c-white;
+                    }
+                    .wrapper-base__link__arrow:after {
+                        background-image: url('../img/arrow_w.png');
+                    }
+                }
 
                 & > div {
                     display: inline-block;
@@ -269,6 +278,7 @@
                 display: inline-block;
                 margin-top: @step-m;
                 width: 340px;
+                max-width: 100%;
                 font-size: 1rem;
                 line-height: 24px;
                 vertical-align: top;

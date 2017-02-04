@@ -258,10 +258,11 @@
 }
 
 @media @767 {
-    #modal-about_us {
+    #modal-about_us, #modal-contacts {
     
         .md-content {
             overflow: auto;
+            font-size: 0;
 
             &__main {
                 padding: 45px @step-m @step-m;
@@ -303,6 +304,62 @@
                     box-sizing: border-box;
                     opacity: 1;
                 }
+
+                &.main__form {
+                    padding-bottom: @step-xs;
+                }
+                & form {
+                    margin-top: @step-s;
+
+
+                    .main__form__submit {
+                        margin-top: @step-s;
+                    }
+                }
+
+                &.main__form__alert {
+                    & .main__title {
+                        text-align: center;
+                    }
+
+                    .main__caption {
+                        max-width: 100%;
+                    }
+                }
+                
+                & .keep-touch {
+                        margin-top: @step-m;
+                        text-align: left;
+                        //.keep-touch-item
+                        &-item {
+                            display: block;
+
+                            &:first-child {
+                                float: none;
+                            }
+
+                            &:last-child {
+                                float: none;
+                            }
+                        }
+
+                        .keep-touch-item + .keep-touch-item {
+                            margin-top: @step-m;
+                        }
+                        //.keep-touch-title
+                        &-title {
+                            font-size: 1rem;
+                        }
+
+                        //.keep-touch-links
+                        &-links {
+                
+                            //.keep-touch-links-item 
+                            &-item {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
             }
             .clients {
                 width: 100%;

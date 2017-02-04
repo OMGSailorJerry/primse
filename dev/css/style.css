@@ -92,7 +92,7 @@ a.underline:after {
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .burger {
     display: inline;
   }
@@ -110,7 +110,7 @@ a.underline:after {
   z-index: 10;
   font-size: 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .nav {
     padding: 15px 15px 0;
   }
@@ -132,7 +132,7 @@ a.underline:after {
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .nav__links__close {
     display: block;
   }
@@ -149,7 +149,7 @@ a.underline:after {
 .nav__links__item + .nav__links__item {
   margin-left: 40px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .nav__links {
     padding: calc((100vh - 225px) / 2) 30px;
     position: fixed;
@@ -181,7 +181,7 @@ a.underline:after {
   text-align: center;
   vertical-align: top;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .nav__brand {
     width: 100px;
     margin: 0 auto;
@@ -195,7 +195,7 @@ a.underline:after {
   display: inline-block;
   vertical-align: middle;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .nav__brand:before {
     height: 18px;
   }
@@ -218,7 +218,7 @@ a.underline:after {
   line-height: 37px;
   vertical-align: top;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .nav__contact {
     display: none;
   }
@@ -252,7 +252,7 @@ a.underline:after {
   padding: 10px 50px;
   background-color: #000;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .ha-header-hide .nav,
   .ha-header-small .nav {
     padding-right: 15px;
@@ -262,8 +262,9 @@ a.underline:after {
 .ha-header-hide .nav .nav__brand a img,
 .ha-header-small .nav .nav__brand a img {
   height: 15px;
+  width: auto;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .ha-header-hide .nav .nav__brand a img,
   .ha-header-small .nav .nav__brand a img {
     height: 18px;
@@ -406,6 +407,15 @@ a.underline:after {
 }
 .wrapper-base__link a:hover .wrapper-base__link__arrow:after {
   background-image: url('../img/arrow_w.png');
+}
+@media (max-width: 767px) {
+  .wrapper-base__link a .wrapper-base__link__title,
+  .wrapper-base__link a .wrapper-base__link__project {
+    color: #fff;
+  }
+  .wrapper-base__link a .wrapper-base__link__arrow:after {
+    background-image: url('../img/arrow_w.png');
+  }
 }
 .wrapper-base__link a > div {
   display: inline-block;
@@ -596,6 +606,7 @@ a.underline:after {
   display: inline-block;
   margin-top: 30px;
   width: 340px;
+  max-width: 100%;
   font-size: 1rem;
   line-height: 24px;
   vertical-align: top;
@@ -1432,34 +1443,43 @@ a.underline:after {
   transition: all 450ms cubic-bezier(1, -0.58, 1, 0.88);
 }
 @media (max-width: 767px) {
-  #modal-about_us .md-content {
+  #modal-about_us .md-content,
+  #modal-contacts .md-content {
     overflow: auto;
+    font-size: 0;
   }
-  #modal-about_us .md-content__main {
+  #modal-about_us .md-content__main,
+  #modal-contacts .md-content__main {
     padding: 45px 30px 30px;
     width: 100%;
     box-sizing: border-box;
   }
   #modal-about_us .md-content__main__left,
-  #modal-about_us .md-content__main__right {
+  #modal-contacts .md-content__main__left,
+  #modal-about_us .md-content__main__right,
+  #modal-contacts .md-content__main__right {
     display: inline-block;
     width: 100%;
     height: auto;
     text-align: left;
     vertical-align: top;
   }
-  #modal-about_us .md-content__main .main__title {
+  #modal-about_us .md-content__main .main__title,
+  #modal-contacts .md-content__main .main__title {
     margin-top: 40px;
     font-size: 2.3rem;
   }
-  #modal-about_us .md-content__main .main__paragraph {
+  #modal-about_us .md-content__main .main__paragraph,
+  #modal-contacts .md-content__main .main__paragraph {
     margin-top: 30px;
   }
-  #modal-about_us .md-content__main .main__text {
+  #modal-about_us .md-content__main .main__text,
+  #modal-contacts .md-content__main .main__text {
     font-size: 1rem;
     line-height: 26px;
   }
-  #modal-about_us .md-content__main .main__caption {
+  #modal-about_us .md-content__main .main__caption,
+  #modal-contacts .md-content__main .main__caption {
     display: inline-block;
     margin-top: 30px;
     width: 100%;
@@ -1469,13 +1489,65 @@ a.underline:after {
     box-sizing: border-box;
     opacity: 1;
   }
-  #modal-about_us .md-content .clients {
+  #modal-about_us .md-content__main.main__form,
+  #modal-contacts .md-content__main.main__form {
+    padding-bottom: 10px;
+  }
+  #modal-about_us .md-content__main form,
+  #modal-contacts .md-content__main form {
+    margin-top: 20px;
+  }
+  #modal-about_us .md-content__main form .main__form__submit,
+  #modal-contacts .md-content__main form .main__form__submit {
+    margin-top: 20px;
+  }
+  #modal-about_us .md-content__main.main__form__alert .main__title,
+  #modal-contacts .md-content__main.main__form__alert .main__title {
+    text-align: center;
+  }
+  #modal-about_us .md-content__main.main__form__alert .main__caption,
+  #modal-contacts .md-content__main.main__form__alert .main__caption {
+    max-width: 100%;
+  }
+  #modal-about_us .md-content__main .keep-touch,
+  #modal-contacts .md-content__main .keep-touch {
+    margin-top: 30px;
+    text-align: left;
+  }
+  #modal-about_us .md-content__main .keep-touch-item,
+  #modal-contacts .md-content__main .keep-touch-item {
+    display: block;
+  }
+  #modal-about_us .md-content__main .keep-touch-item:first-child,
+  #modal-contacts .md-content__main .keep-touch-item:first-child {
+    float: none;
+  }
+  #modal-about_us .md-content__main .keep-touch-item:last-child,
+  #modal-contacts .md-content__main .keep-touch-item:last-child {
+    float: none;
+  }
+  #modal-about_us .md-content__main .keep-touch .keep-touch-item + .keep-touch-item,
+  #modal-contacts .md-content__main .keep-touch .keep-touch-item + .keep-touch-item {
+    margin-top: 30px;
+  }
+  #modal-about_us .md-content__main .keep-touch-title,
+  #modal-contacts .md-content__main .keep-touch-title {
+    font-size: 1rem;
+  }
+  #modal-about_us .md-content__main .keep-touch-links-item,
+  #modal-contacts .md-content__main .keep-touch-links-item {
+    font-size: 1rem;
+  }
+  #modal-about_us .md-content .clients,
+  #modal-contacts .md-content .clients {
     width: 100%;
   }
-  #modal-about_us .md-content .clients__item {
+  #modal-about_us .md-content .clients__item,
+  #modal-contacts .md-content .clients__item {
     padding: 10px;
   }
-  #modal-about_us .md-content .clients__item img {
+  #modal-about_us .md-content .clients__item img,
+  #modal-contacts .md-content .clients__item img {
     width: 100%;
   }
 }

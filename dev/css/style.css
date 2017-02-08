@@ -954,7 +954,7 @@ a.underline:after {
 }
 .header {
   width: 100%;
-  top: -402px;
+  top: -387px;
   left: 0;
   right: 0;
   position: absolute;
@@ -1425,6 +1425,7 @@ a.underline:after {
 }
 .md-content .main__caption {
   display: inline-block;
+  opacity: .5;
   margin-top: 40px;
   width: 50%;
   font-size: 1rem;
@@ -1532,7 +1533,6 @@ a.underline:after {
     line-height: 24px;
     vertical-align: top;
     box-sizing: border-box;
-    opacity: 1;
   }
   #modal-about_us .md-content__main.main__form,
   #modal-contacts .md-content__main.main__form {
@@ -2170,6 +2170,9 @@ body[data-state=intro] .contact-modal .close:hover span:nth-child(2)::before {
   transition: 0.45s cubic-bezier(0.7, 0.3, 0, 1);
 }
 /* ----------------------- Helpers ------------------------- */
+.aligned {
+  font-size: 0;
+}
 .aligned:before {
   content: " ";
   display: inline-block;

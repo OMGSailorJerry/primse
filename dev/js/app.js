@@ -75,6 +75,14 @@ $(document).ready(function() {
 		);
 	});
 
+    
+    $('li[data-modal=modal-works]').on('click', function(){
+        $('body, html').css('overflow', 'hidden');
+
+        $('.md-close').on('click', function(){
+            $('body, html').css('overflow', 'auto');
+        })
+    })
 });
 
 function reloadPage() {

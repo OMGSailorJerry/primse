@@ -374,7 +374,7 @@ a.underline:after {
 }
 @media (max-width: 1024px) {
   .wrapper-base {
-    padding-top: 220px;
+    padding-top: 160px;
   }
 }
 .wrapper-base .wrapper__parallax {
@@ -412,6 +412,9 @@ a.underline:after {
   .wrapper-base__link a .wrapper-base__link__title,
   .wrapper-base__link a .wrapper-base__link__project {
     color: #fff;
+  }
+  .wrapper-base__link a .wrapper-base__link__project {
+    font-size: 2.5rem;
   }
   .wrapper-base__link a .wrapper-base__link__arrow:after {
     background-image: url('../img/arrow_w.png');
@@ -522,17 +525,13 @@ a.underline:after {
   }
 }
 .main .left-side .main__caption {
+  font-size: 1rem;
   max-width: 470px;
+  font-family: 'Montserrat';
 }
 @media (max-width: 1024px) {
   .main .left-side .main__caption {
-    font-size: 1rem;
     max-width: 320px;
-  }
-}
-@media (max-width: 1024px) {
-  .main .left-side .main__caption_tablet {
-    font-size: .86rem;
   }
 }
 .main .right-side {
@@ -560,7 +559,7 @@ a.underline:after {
 }
 .main__form {
   width: 80%;
-  max-width: 620px;
+  max-width: 790px;
 }
 .main__form_hide {
   display: none !important;
@@ -811,6 +810,11 @@ a.underline:after {
     margin-top: 100px;
   }
 }
+@media (max-width: 767px) {
+  .container__title {
+    padding: 0 30px;
+  }
+}
 .container__text {
   font-size: 1.3rem;
   color: #000;
@@ -824,6 +828,11 @@ a.underline:after {
 @media (max-width: 1024px) {
   .container__text {
     font-size: 1.15rem;
+  }
+}
+@media (max-width: 767px) {
+  .container__text {
+    line-height: 25px;
   }
 }
 .container__left {
@@ -872,6 +881,7 @@ a.underline:after {
   .container__right .container__text {
     margin-top: 30px;
     text-align: center;
+    float: none;
   }
 }
 @media (max-width: 1024px) {
@@ -894,6 +904,12 @@ a.underline:after {
     margin-top: 100px;
   }
 }
+@media (max-width: 767px) {
+  .container .container__img {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
 .container .container__img img {
   width: 100%;
   height: auto;
@@ -903,6 +919,11 @@ a.underline:after {
   top: 20%;
   right: 0;
   width: 40%;
+}
+@media (max-width: 767px) {
+  .container .container__img__text {
+    right: 20px;
+  }
 }
 .container .container__img__text__title {
   font-size: 4rem;
@@ -1067,6 +1088,16 @@ a.underline:after {
   box-sizing: border-box;
   text-align: center;
   padding: 70px;
+}
+@media (max-width: 767px) {
+  .base-footer__brand {
+    width: 100px;
+    margin: 0 auto;
+  }
+}
+.base-footer__brand img {
+  max-width: 183px;
+  width: 100%;
 }
 .base-footer .social-list {
   text-align: center;
@@ -1338,11 +1369,24 @@ a.underline:after {
 }
 .md-content__main__left,
 .md-content__main__right {
+  padding: 10px 40px;
   display: inline-block;
   width: 510px;
   height: auto;
   text-align: left;
   vertical-align: top;
+}
+@media (max-width: 767px) {
+  .md-content__main__left,
+  .md-content__main__right {
+    padding: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .md-content__main__left,
+  .md-content__main__right {
+    width: 440px;
+  }
 }
 .md-content__header {
   width: 100%;
@@ -1351,11 +1395,11 @@ a.underline:after {
 }
 @media (max-width: 767px) {
   .md-content__header {
-    height: 118px;
+    height: 0;
   }
 }
 .md-content__body {
-  height: calc(100% - 114px);
+  height: calc(100% - 81px);
 }
 .md-content .main__title {
   width: 100%;
@@ -1372,11 +1416,11 @@ a.underline:after {
 }
 .md-content .main__paragraph {
   margin-top: 40px;
-  opacity: .5;
   font-family: 'Montserrat Light';
 }
 .md-content .main__text {
   font-size: 1.3rem;
+  opacity: .5;
   line-height: 26px;
 }
 .md-content .main__caption {
@@ -1391,6 +1435,7 @@ a.underline:after {
 }
 .md-content .clients {
   width: 400px;
+  max-width: 100%;
 }
 .md-content .clients__item {
   margin-top: 40px;
@@ -1528,7 +1573,7 @@ a.underline:after {
   }
   #modal-about_us .md-content__main .keep-touch .keep-touch-item + .keep-touch-item,
   #modal-contacts .md-content__main .keep-touch .keep-touch-item + .keep-touch-item {
-    margin-top: 30px;
+    margin-top: 10px;
   }
   #modal-about_us .md-content__main .keep-touch-title,
   #modal-contacts .md-content__main .keep-touch-title {

@@ -10,7 +10,7 @@
         padding-top: 330px;
 
         @media @1024 {
-            padding-top: 220px;
+            padding-top: 160px;
         }
         
         .wrapper__parallax {
@@ -51,6 +51,9 @@
                 @media @767 {
                     .wrapper-base__link__title, .wrapper-base__link__project {
                         color: @c-white;
+                    }
+                     .wrapper-base__link__project {
+                        font-size: 2.5rem;
                     }
                     .wrapper-base__link__arrow:after {
                         background-image: url('../img/arrow_w.png');
@@ -181,18 +184,15 @@
             }
         }
         .main__caption {
-            // font-size: 1.3rem;
+            font-size: 1rem;
             max-width: 470px;
+            font-family: @font;
             @media @1024 {
-                font-size: 1rem;
                 max-width: 320px;
             }
 
             //.main__caption_tablet
             &_tablet {
-                @media @1024 {
-                    font-size: .86rem;
-                }
             }
         }
     }
@@ -231,7 +231,7 @@
     //.main__form
     &__form {
         width: 80%;
-        max-width: 620px; 
+        max-width: 790px; 
 
         //.main__form_hide
         &_hide {

@@ -1,5 +1,5 @@
 .footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
@@ -8,11 +8,13 @@
     box-sizing: border-box;
     font-size: 0;
     z-index: 10;
+    text-align: center;
 
     //.footer__copyright
     &__copyright {
+        text-align: left;
         width: calc(~'(100% - 300px) / 2');
-        display: inline-block;
+        display: none;
         font-size: 1rem;
         font-family: @font-lt;
         height: @step-s;
@@ -20,16 +22,23 @@
         letter-spacing: 0.5px;
         vertical-align: top;
         opacity: .5;
+        @media (min-width: 768px) {
+            display: inline-block;
+        }
     }
 
     //.footer__social
     &__social {
         width: calc(~'(100% - 300px) / 2');
-        display: inline-block;
+        
         height: @step-s;
         line-height: @step-s;
         vertical-align: top;
+        display: none;
         
+        @media (min-width: 769px) {
+            display: inline-block;
+        }
     }
 
     .page-nav {

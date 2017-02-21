@@ -22,9 +22,8 @@
     //.md-modal
     &-modal {
         position: fixed;
-        top: 50%;
-        left: 50%;
-        width: 50%;
+        top: 50vh;
+        left: 50vw;
         width: calc(~'100vw - @{step-xl} * 2');
         max-width: 100vw;
         height: calc(~'100vh - @{step-xl} * 2');
@@ -386,6 +385,24 @@
                          width: 100%;
                     }
                 }
+            }
+        }
+    }
+}
+@media @1023 {
+    .keep-touch {
+        margin-top: @step-m;
+        text-align: left;
+        //.keep-touch-item
+        &-item {
+            display: block;
+
+            &:first-child {
+                float: none;
+            }
+
+            &:last-child {
+                float: none;
             }
         }
     }

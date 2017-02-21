@@ -42,10 +42,16 @@
         }
     } 
     .nav-on-scroll {
-        color: @c-black;  
+        color: @c-black;
+        @media @1023 {
+            color: @c-white;
+        }  
         a.line-through {
             &:after {
                 background-color: @c-black;
+              @media @1023 {
+                    background-color: @c-white;
+                }  
             }
         } 
         .nav__brand__logo {
@@ -78,10 +84,17 @@
         display: none;
     }
     .social-list__item_on-light {
-        display: inline-block;
+        display: none;
+
+        @media (min-width: 769px) {
+            display: inline-block;
+        }
     }
     .stars {
         display: none;
+    }
+    .burger {
+        background-image: url('../img/menu_b.png');
     }
 }
 .pp-viewing-page2 {

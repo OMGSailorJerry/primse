@@ -61,7 +61,9 @@ $(document).ready(function() {
 	//hide or show the "back to top" link
 	$(window).scroll(function(){
 		( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible').removeClass('cd-fade-out') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-		if( $(this).scrollTop() > $('wrapper')['0'].clientHeight - 1000 ) { 
+        // debugger
+        // console.log($('html')['0'].offsetHeight, $(this).scrollTop() + $('html')['0'].clientHeight )
+		if( $(this).scrollTop() > $('html')['0'].offsetHeight - $('html')['0'].clientHeight - $('.wrapper-base__link')[0].clientHeight - $('footer')[0].clientHeight) { 
 			$back_to_top.addClass('cd-fade-out');
 		}
 	});

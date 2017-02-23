@@ -285,6 +285,7 @@
         width: 100%;
         padding: 90px;
         box-sizing: border-box;
+        max-height: 387 px;
 
         @media @1024 {
             padding: 45px;
@@ -302,6 +303,15 @@
          
             @media @767 {
                 width: 100%;
+            }
+            & .main__title + .main__caption {
+                margin-left: inherit;
+                margin-right: inherit;
+                height: 75px;
+         
+                @media @1024 {
+                    margin-bottom: 30px;
+                }
             }
         }
         .right-side {

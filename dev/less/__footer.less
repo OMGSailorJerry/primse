@@ -10,6 +10,7 @@
     z-index: 10;
     text-align: center;
 
+
     //.footer__copyright
     &__copyright {
         text-align: left;
@@ -22,7 +23,7 @@
         letter-spacing: 0.5px;
         vertical-align: top;
         opacity: .5;
-        @media (min-width: 768px) {
+        @media (min-width: 769px) {
             display: inline-block;
         }
     }
@@ -84,6 +85,57 @@
         width: 300px;
     }
 }
+@media @767 {
+    .footer {
+        padding: 25px 0;
+        
+        //.footer__copyright
+        &__copyright {
+
+        }
+
+        //.footer__social
+        &__social {
+
+        }
+
+        .page-nav {
+            width: 100%;
+
+            //.page-nav__list 
+            &__list {
+                
+
+                //.page-nav__list__item
+                &__item {
+
+
+                    &:hover {
+                        
+                    }
+                    //.page-nav__list__item.active 
+                    &.active {
+                        
+                    }
+                    &:last-child {
+                        
+                    }
+
+                    & a {
+                        
+                        div {
+                        
+                        }
+                    }
+                }
+            }
+        }
+        .footer__offset {
+
+        }
+    }
+}
+
 
 .social-list {
     text-align: right;

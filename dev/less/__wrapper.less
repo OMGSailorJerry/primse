@@ -134,6 +134,12 @@
         
         & + .main__caption {
             margin-top: 15px;
+
+            @media @767 {
+                max-width: 200px;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
         //.main__title_large
         &_large {
@@ -156,6 +162,8 @@
         text-transform: uppercase;
         letter-spacing: .5px;
         font-size: 1rem;
+        
+
     }
 
     .left-side{
@@ -171,9 +179,13 @@
         transition: opacity .2s;
 
         @media @1023 {
-            display: block;
+            display: inline-block;
             width: 100%;
             height: auto;
+        }
+        
+        @media @767 {
+            padding: 0 @step-m;
         }
 
         .main__title, .main__caption, .main__link {
@@ -181,6 +193,12 @@
             width: 100%;
             max-width: 100%;
         }
+        .main__link {
+            @media @767 {
+                margin-top: @step-xs;
+            }
+        }
+        
         .main__title {
             margin-top: @step-s;
             
@@ -188,17 +206,29 @@
                 margin-top: 0;
                 font-size: 2.5rem;
             }
+            
+            @media @767 {
+                font-size: 2.4rem;
+            }
         }
         .main__caption {
             font-size: 1rem;
             max-width: 470px;
             font-family: @font;
+         
+            @media @767 {
+                font-family: @font-lt;
+                margin-top: @step-xs;
+                line-height: @step-s;
+            }
+
             @media @1024 {
                 max-width: 320px;
             }
 
             //.main__caption_tablet
             &_tablet {
+
             }
         }
     }
@@ -215,12 +245,20 @@
         
         @media @1023 {
             float: none;
+            display: inline-block;
             width: 100%;
             height: 170px;
 
             .right-side__img {
                 max-width: 500px;
                 left: calc(~'50% - 250px');
+            }
+        }
+        @media @767 {
+            height: 90px;
+
+            .right-side__img {
+                left: auto;
             }
         }
         

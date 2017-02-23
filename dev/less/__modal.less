@@ -134,7 +134,11 @@
 
         //.md-content__body
         &__body {
-            height: calc(~'100% - 81px');
+            height: calc(~'100% - 114px');
+
+            @media @767 {
+                height: calc(~'100% - 81px');
+            }
         }
         .main__title {
             width: 100%;

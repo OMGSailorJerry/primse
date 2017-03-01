@@ -1,18 +1,16 @@
 $(document).ready(function() {
   
     $('[data-type=sendButton]').on('click', function(e){ 
-        e.preventDefault();
-        $('.main__form').addClass('main__form_hide');
-  
         $('.main__form__alert_hide').removeClass('main__form__alert_hide');
-  
+        $('.main__form').addClass('main__form_hide');
+        
+        e.preventDefault();
     });
 
     $('.burger').on('click', function() {
         $( '#ha-header' ).css( "z-index", "65" );
         $('.nav__links').addClass('nav__links_mobile-open');
         
-    
     });
 
     $('.nav__links__close, .nav__links__item').on('click', function(){
@@ -22,8 +20,6 @@ $(document).ready(function() {
     });
 
     var rellax = new Rellax('.rellax', {
-
-        // center: true
 
     });
 
@@ -85,6 +81,44 @@ $(document).ready(function() {
             $('body, html').css('overflow', 'auto');
         })
     })
+
+    var height = Math.max(document.documentElement.clientHeight, window.innerHeight || 700);
+
+    var autoFade = function () {
+        $(".fadeInAndScrollThis").each(function () {
+            var $this = $(this);
+            if (this.getBoundingClientRect().top < height * 0.90) {
+                $this.css({"opacity": "1", "transition": "opacity 1s, transform 1s", "transform": "none"});
+            }
+        })
+    };
+
+    autoFade();
+
+    var scrollFade = function () {
+        $(".fadeInAndScrollThis").each(function () {
+            var $this = $(this);
+            if (this.getBoundingClientRect().top < height * 0.90) {
+                $this.css({"opacity": "1", "transition": "opacity 1s, transform 1s", "transform": "none"});
+            }
+            else if (this.getBoundingClientRect().bottom > height * 0.90) {
+                $this.css({
+                    "opacity": "0",
+                    "transition": "opacity 1s, transform 1s",
+                    "transform": "translate(0px, 60px)"
+                });
+            }
+        });
+    };
+
+    $(window).resize(function () {
+        height = Math.max(document.documentElement.clientHeight, window.innerHeight || 700);
+        scrollFade();
+    });
+
+    $(document).scroll(function (e) {
+        scrollFade();
+    });
 });
 
 function reloadPage() {

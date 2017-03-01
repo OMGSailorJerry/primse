@@ -52,9 +52,18 @@ a {
             bottom: -2px; 
             left: 0;
             right: 0;
-            
-            height: 1px;
+            width: 0;
+            right: auto;
+            height: 2px;
             background-color: @c-white;
+            transition: width .25s;
+        }
+        &:hover, &:active, &:focus, &[active] {
+            &:after {
+                width: 100%;
+                transition: width .25s;
+                color: inherit;
+            }
         }
     }
 }

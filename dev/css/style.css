@@ -52,8 +52,19 @@ a.underline:after {
   bottom: -2px;
   left: 0;
   right: 0;
-  height: 1px;
+  width: 0;
+  right: auto;
+  height: 2px;
   background-color: #fff;
+  transition: width .25s;
+}
+a.underline:hover:after,
+a.underline:active:after,
+a.underline:focus:after,
+a.underline[active]:after {
+  width: 100%;
+  transition: width .25s;
+  color: inherit;
 }
 /* ----------------------- Fonts --------------------------- */
 /* ------------------ Variables & mixins ------------------- */
@@ -521,7 +532,6 @@ a.underline:after {
 }
 .main__link {
   margin-top: 30px;
-  text-transform: uppercase;
   letter-spacing: .5px;
   font-size: 1rem;
 }
@@ -554,6 +564,10 @@ a.underline:after {
   text-align: left;
   width: 100%;
   max-width: 100%;
+}
+.main .left-side .main__link {
+  font-size: 1.3rem;
+  opacity: .5;
 }
 @media (max-width: 767px) {
   .main .left-side .main__link {
@@ -1238,7 +1252,8 @@ a.underline:after {
   opacity: 1;
   transition: opacity 0.5s 0.5s;
 }
-.pp-viewing-page1 a.underline:after {
+.pp-viewing-page1 a.underline:after,
+.pp-viewing-page1 a.line-through:after {
   background-color: #000;
 }
 .pp-viewing-page1 .nav-on-scroll {

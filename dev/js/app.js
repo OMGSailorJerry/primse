@@ -1,11 +1,19 @@
 $(document).ready(function() {
-  
+    $('.main__form').removeClass('main__form_hide');
+    
     $('[data-type=sendButton]').on('click', function(e){ 
         $('.main__form__alert_hide').removeClass('main__form__alert_hide');
         $('.main__form').addClass('main__form_hide');
         
         e.preventDefault();
     });
+
+    $('.md-closeDone').on('click', function(){
+        $('.main__form').removeClass('main__form_hide');
+        $('.main__form__alert').addClass('main__form__alert_hide');
+        $('#contact-form').trigger( 'reset' );
+
+    })
 
     $('.burger').on('click', function() {
         $( '#ha-header' ).css( "z-index", "65" );
@@ -122,7 +130,5 @@ $(document).ready(function() {
 });
 
 function reloadPage() {
-
     location.reload();
-
 }

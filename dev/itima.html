@@ -141,10 +141,10 @@
 	            </a>
             </div>
 
-            <div class="md-content__main main__form">
+            <div class="md-content__main main__form main__form_hide">
                 <div class="main__title">Contacts</div>
 
-                <form action="" class="">
+                <form action="" class="" id="contact-form">
                     <input type="text" class="main__form__input" placeholder="What’s is your name?">
                     <input type="email" class="main__form__input" placeholder="Your E-mail">
                     <input type="text" class="main__form__input" placeholder="What we can help with you?">
@@ -182,9 +182,11 @@
             <div class="md-content__main main__form__alert main__form__alert_hide">
                 <div class="main__title">You are well done!</div>
                 <div class="main__form__alert__caption">We have received your letter, and will soon get back to you</div>
-                <!--<a href="index.html" class="main__form__alert__submit">done</a>-->
+                <div class="md-closeDone">
+                    <a href="#" class="main__form__alert__submit">done</a>
+                </div>   
                 <!--<bitton onclick="reloadPage()" class="main__form__alert__submit">done</button>-->
-                <bitton onclick="reloadPage()" class="main__form__alert__submit">done</button>
+                <!--<button onclick="reloadPage()" class="main__form__alert__submit">done</button>-->
             </div>
         </div>
     </div>

@@ -27,10 +27,6 @@ $(document).ready(function() {
         $( '#ha-header' ).css( "z-index", "12" );
     });
 
-    var rellax = new Rellax('.rellax', {
-
-    });
-
     var $head = $( '#ha-header' );
 
     $( '.ha-waypoint' ).each( function(i) {

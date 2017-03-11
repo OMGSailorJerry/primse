@@ -159,11 +159,8 @@
     //.main__link
     &__link {
         margin-top: @step-m;
-        // text-transform: uppercase;
         letter-spacing: .5px;
         font-size: 1rem;
-        
-
     }
 
     .left-side{
@@ -257,7 +254,7 @@
             }
         }
         @media @767 {
-            height: 90px;
+            // height: 90px;
 
             .right-side__img {
                 left: auto;
@@ -430,30 +427,36 @@
   transition: opacity .3s 0s, visibility 0s .3s, bottom .3s 0s;
   z-index: 60;
 }
+
 .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
   -webkit-transition: opacity .3s 0s, visibility 0s 0s, bottom .3s 0s;
   -moz-transition: opacity .3s 0s, visibility 0s 0s, bottom .3s 0s;
   transition: opacity .3s 0s, visibility 0s 0s, bottom .3s 0s;
 }
+
 .cd-top.cd-is-visible {
   /* the button becomes visible */
   visibility: visible;
   opacity: 1;
 }
+
 .cd-top.cd-fade-out {
   /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
 //   opacity: .3;
 }
+
 .no-touch .cd-top:hover {
   background-color: @c-blue;
   opacity: 1;
 }
+
 .cd-top-wrapper {
     height: 40px;
     margin-top: 30px;
     padding: 0 10px;
     text-align: right;
 }
+
 @media only screen and (min-width: 768px) {
   .cd-top {
     right: 20px;
@@ -463,6 +466,7 @@
         padding: 0 20px;
     }
 }
+
 @media only screen and (min-width: 1024px) {
   .cd-top {
     height: 60px;
@@ -493,6 +497,7 @@
   opacity: 1;
   
 }
+
 .cd-top.cd-fade-out {
   /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
     margin-top: 10px;

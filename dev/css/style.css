@@ -625,9 +625,6 @@ a.underline:hover:after {
   }
 }
 @media (max-width: 767px) {
-  .main .right-side {
-    height: 90px;
-  }
   .main .right-side .right-side__img {
     left: auto;
   }
@@ -1375,6 +1372,23 @@ a.underline:hover:after {
     font-size: 2.8rem;
     max-width: 260px;
   }
+  .main .left-side {
+    margin-top: 36px;
+  }
+  .main .left-side .main__title {
+    text-align: center;
+  }
+  .main .left-side .main__title + .main__caption {
+    display: none;
+  }
+  .main .left-side .main__caption {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main .left-side .main__link {
+    text-align: center;
+  }
 }
 .counter {
   display: none;
@@ -1400,6 +1414,7 @@ a.underline:hover:after {
 @media (max-width: 767px) {
   .counter {
     padding-top: 70vh;
+    display: none !important;
   }
   .counter .counter__i {
     width: 50px;

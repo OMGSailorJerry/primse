@@ -1,5 +1,3 @@
-
-
 /* Overwriting fullPage.js tooltip color
 * --------------------------------------- */
 .pp-tableCell {
@@ -25,7 +23,6 @@
     //     opacity: 1;
     // }
 }
-
 .pp-viewing-page1 {
     [data-anchor="page1"] {
         .left-side, .right-side {
@@ -185,5 +182,28 @@
     .main__title_large {
         font-size: 2.8rem;
         max-width: 260px;
+    }
+    .main {
+        .left-side {
+            margin-top: 36px;
+
+            .main__title {
+                text-align: center;
+                
+                & + .main__caption {
+                    display: none;
+                }
+            }
+            
+            .main__caption {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .main__link {
+                text-align: center;
+            }
+        }
     }
 }

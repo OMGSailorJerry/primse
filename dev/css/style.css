@@ -1368,26 +1368,26 @@ a.underline:hover:after {
   .pp-tableCell {
     padding: 0;
   }
-  .main__title_large {
-    font-size: 2.8rem;
-    max-width: 260px;
-  }
-  .main .left-side {
+  .pp-tableCell .main .left-side {
     margin-top: 36px;
   }
-  .main .left-side .main__title {
+  .pp-tableCell .main .left-side .main__title {
     text-align: center;
   }
-  .main .left-side .main__title + .main__caption {
+  .pp-tableCell .main .left-side .main__title + .main__caption {
     display: none;
   }
-  .main .left-side .main__caption {
+  .pp-tableCell .main .left-side .main__caption {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
-  .main .left-side .main__link {
+  .pp-tableCell .main .left-side .main__link {
     text-align: center;
+  }
+  .main__title_large {
+    font-size: 2.8rem;
+    max-width: 260px;
   }
 }
 .counter {

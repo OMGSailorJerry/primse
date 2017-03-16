@@ -18,13 +18,14 @@ $(document).ready(function() {
     $('.burger').on('click', function() {
         $( '#ha-header' ).css( "z-index", "65" );
         $('.nav__links').addClass('nav__links_mobile-open');
-        
+        $('#menu').css('visibility', 'hidden');
     });
 
     $('.nav__links__close, .nav__links__item').on('click', function(){
         
         $('.nav__links').removeClass('nav__links_mobile-open');
         $( '#ha-header' ).css( "z-index", "12" );
+        $('#menu').css('visibility', 'visible');
     });
 
     var $head = $( '#ha-header' );
